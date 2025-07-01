@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Trashcan Records Studio Website
+
+A modern, responsive website for Trashcan Records Studio - an underground recording studio in Providence, RI built with Next.js and Tailwind CSS.
 
 ## Getting Started
 
-First, run the development server:
-
+1. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run the development server:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+- `/app` - Next.js app router pages and layouts
+- `/components` - Reusable React components (Header, Footer)
+- `/public` - Static assets (images, logos, etc.)
+- `tailwind.config.ts` - Custom podcast-themed color palette and animations
 
-To learn more about Next.js, take a look at the following resources:
+## Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Professional Design**: Modern UI with podcast-themed colors and animations
+- **Responsive Layout**: Mobile-friendly design that works on all devices
+- **Studio Showcase**: Comprehensive overview of studio features and equipment
+- **Package Pricing**: Clear pricing tiers for different recording needs
+- **Booking System**: Contact form for studio bookings and inquiries
+- **Trashcan Records Branding**: Underground studio aesthetic with professional functionality
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Studio Packages
 
-## Deploy on Vercel
+- **Solo Creator** ($25/hour) - Perfect for individual podcasters
+- **Duo/Interview** ($40/hour) - Ideal for interviews and conversations
+- **Group Recording** ($60/hour) - Professional setup for larger productions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Studio Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 🎙️ Professional microphones
+- 🎧 Real-time audio monitoring
+- 💻 Pre-installed recording software
+- 🔇 Acoustically treated soundproof room
+- 📺 Optional video recording capability
+- ☁️ Cloud storage and backup
+
+## Contact Information
+
+- **Location**: Trashcan Records Studio, 123 Underground Ave, Providence, RI 02903
+- **Phone**: (401) 555-ROCK
+- **Email**: studio@trashcanrecords.com
+
+## Color Palette
+
+The website uses a professional podcast-themed color scheme:
+- **Primary**: Deep navy blue (#1B263B)
+- **Secondary**: Medium blue-gray (#415A77)
+- **Accent**: Light blue-gray (#778DA9)
+- **Gold**: Off-white/cream (#E0E1DD)
+- **Highlight**: Very dark blue (#0D1B2A)
+- **Recording Red**: Podcast recording indicator (#C5282F)
+
+## Technology Stack
+
+- **Framework**: Next.js 14 with App Router
+- **Styling**: Tailwind CSS with custom configuration
+- **Typography**: Inter font family
+- **Icons**: SVG icons and emoji
+- **Animations**: Custom CSS animations for podcast theme
+
+## Development
+
+Built as a modern alternative to therapy services websites, specifically designed for the podcast recording industry at CIC Providence. The design emphasizes professionalism, accessibility, and the innovative spirit of the Cambridge Innovation Center community.
+
+## Deployment
+
+Ready for deployment on Vercel, Netlify, or any hosting platform that supports Next.js applications.
