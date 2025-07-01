@@ -8,74 +8,74 @@ export default function Home() {
   const studioFeatures = [
     {
       icon: '🎙️',
-      title: 'Professional Microphones',
-      description: 'Industry-standard podcast microphones with crystal-clear audio quality and zero background noise.',
+      title: 'Professional Podcast Microphones',
+      description: 'High-quality podcast microphones like Shure SM7B with crystal-clear audio quality and zero background noise.',
     },
     {
       icon: '🎧',
-      title: 'Audio Monitoring',
-      description: 'Real-time audio monitoring with professional headphones for perfect sound control.',
+      title: 'Real-Time Audio Monitoring',
+      description: 'Professional headphones for hosts and guests with real-time audio monitoring for perfect podcast sound.',
     },
     {
       icon: '💻',
-      title: 'Recording Software',
-      description: 'Pre-installed recording software with editing capabilities and easy export options.',
+      title: 'Podcast Recording Software',
+      description: 'Pre-installed podcast recording software with editing capabilities and easy export for your episodes.',
     },
     {
       icon: '🔇',
-      title: 'Soundproof Room',
-      description: 'Acoustically treated space ensures professional-quality recordings without outside interference.',
+      title: 'Soundproof Podcast Room',
+      description: 'Acoustically treated space ensures professional podcast quality without outside interference or echo.',
     },
     {
       icon: '📺',
-      title: 'Video Capability',
-      description: 'Optional video recording setup for video podcasts and live streaming.',
+      title: 'Video Podcast Capability',
+      description: 'Multi-camera video setup for video podcasts, YouTube content, and live streaming.',
     },
     {
       icon: '☁️',
-      title: 'Cloud Storage',
-      description: 'Automatic cloud backup and easy file sharing for seamless post-production.',
+      title: 'Cloud Storage & Export',
+      description: 'Automatic cloud backup and easy file sharing for seamless podcast post-production and distribution.',
     }
   ];
 
   const packages = [
     {
-      title: 'Solo Creator',
+      title: 'Solo Podcaster',
       price: '$25/hour',
       features: [
-        'Single microphone setup',
-        'Basic recording software',
-        'Audio monitoring',
-        'Cloud storage access',
-        'Technical support'
+        'Single podcast microphone setup',
+        'Podcast recording software',
+        'Audio monitoring headphones',
+        'Cloud storage & export',
+        'Technical setup assistance'
       ],
       popular: false
     },
     {
-      title: 'Duo/Interview',
+      title: 'Interview/Co-Host',
       price: '$40/hour',
       features: [
         'Two microphone setup',
-        'Advanced recording software',
-        'Audio monitoring for both',
-        'Video recording option',
-        'Cloud storage access',
+        'Advanced podcast software',
+        'Dual audio monitoring',
+        'Video podcast option',
+        'Cloud storage & export',
         'Technical support',
-        'Post-production assistance'
+        'Basic editing assistance'
       ],
       popular: true
     },
     {
-      title: 'Group Recording',
+      title: 'Panel/Group Cast',
       price: '$60/hour',
       features: [
-        'Up to 4 microphones',
-        'Professional mixing board',
-        'Video recording setup',
+        'Up to 4 podcast microphones',
+        'Professional podcast mixer',
+        'Multi-camera video setup',
         'Live streaming capability',
-        'Dedicated engineer',
-        'Cloud storage access',
-        'Full post-production'
+        'Dedicated audio engineer',
+        'Cloud storage & export',
+        'Full production support'
       ],
       popular: false
     }
@@ -112,9 +112,9 @@ export default function Home() {
             <div className="w-32 h-1 bg-gradient-to-r from-podcast-red to-podcast-gold mx-auto rounded-full"></div>
             
                          <p className="text-xl md:text-2xl text-podcast-gold font-light max-w-2xl mx-auto leading-relaxed">
-               Underground recording studio where raw talent meets professional sound in 
+               Professional podcast studio where authentic voices meet crystal-clear sound in 
                <span className="text-podcast-accent font-medium"> Providence, RI</span>. 
-               Where creativity meets quality.
+               Where your story meets professional quality.
              </p>
             
             {/* Call to Action */}
@@ -148,8 +148,8 @@ export default function Home() {
           
           <div className="max-w-4xl mx-auto space-y-8">
                          <p className="text-xl text-gray-700 leading-relaxed text-center">
-               Located in the underground scene of <span className="text-podcast-primary font-semibold">Providence, RI</span>, 
-               Trashcan Records Studio combines raw authenticity with professional-grade equipment for that perfect sound.
+               Located in <span className="text-podcast-primary font-semibold">Providence, RI</span>, 
+               Trashcan Records Podcast Studio combines authentic storytelling with professional-grade equipment for crystal-clear podcast production.
              </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
@@ -165,8 +165,8 @@ export default function Home() {
                 <div className="w-16 h-16 bg-podcast-secondary rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl text-white">🤝</span>
                 </div>
-                                 <h4 className="text-xl font-semibold text-podcast-primary mb-2">Artist Focused</h4>
-                 <p className="text-gray-600">Supporting the underground music and podcast scene.</p>
+                                 <h4 className="text-xl font-semibold text-podcast-primary mb-2">Creator Focused</h4>
+                 <p className="text-gray-600">Supporting podcast creators and content producers.</p>
               </div>
               
               <div className="text-center">
@@ -174,7 +174,7 @@ export default function Home() {
                   <span className="text-2xl text-white">⚡</span>
                 </div>
                 <h4 className="text-xl font-semibold text-podcast-primary mb-2">Always Ready</h4>
-                <p className="text-gray-600">Pre-configured setup means you can start recording immediately.</p>
+                <p className="text-gray-600">Pre-configured podcast setup means you can start recording immediately.</p>
               </div>
             </div>
           </div>
@@ -198,6 +198,123 @@ export default function Home() {
                 <p className="text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Studio Gallery Section */}
+      <section className="py-20 bg-podcast-highlight" id="gallery">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold text-podcast-gold mb-6">Inside Our Studio</h2>
+            <h3 className="text-3xl text-podcast-accent font-medium mb-8">Professional Setup & Equipment</h3>
+            <div className="w-24 h-1 bg-gradient-to-r from-podcast-red to-podcast-gold mx-auto rounded-full"></div>
+          </div>
+          
+          {/* Main Studio Images Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
+            <div className="relative group rounded-2xl overflow-hidden shadow-lg">
+              <img 
+                src="/images/studiopic1.png" 
+                alt="Professional podcast recording setup with acoustic treatment"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-podcast-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                 <div className="absolute bottom-4 left-4">
+                   <h4 className="text-podcast-gold font-semibold text-lg">Podcast Recording Room</h4>
+                   <p className="text-podcast-accent text-sm">Acoustically treated for podcast quality</p>
+                 </div>
+              </div>
+            </div>
+            
+            <div className="relative group rounded-2xl overflow-hidden shadow-lg">
+              <img 
+                src="/images/studiopic2.jpg" 
+                alt="Professional microphones and recording equipment"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-podcast-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                 <div className="absolute bottom-4 left-4">
+                   <h4 className="text-podcast-gold font-semibold text-lg">Podcast Equipment</h4>
+                   <p className="text-podcast-accent text-sm">Professional podcast microphones</p>
+                 </div>
+              </div>
+            </div>
+            
+            <div className="relative group rounded-2xl overflow-hidden shadow-lg">
+              <img 
+                src="/images/studiopic3.jpg" 
+                alt="Studio control room and mixing setup"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-podcast-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-4 left-4">
+                  <h4 className="text-podcast-gold font-semibold text-lg">Control Room</h4>
+                  <p className="text-podcast-accent text-sm">Professional mixing board</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative group rounded-2xl overflow-hidden shadow-lg md:col-span-2">
+              <img 
+                src="/images/studiopic4.png" 
+                alt="Full studio view with multiple recording stations"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-podcast-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-4 left-4">
+                  <h4 className="text-podcast-gold font-semibold text-lg">Full Studio View</h4>
+                  <p className="text-podcast-accent text-sm">Multiple recording stations available</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative group rounded-2xl overflow-hidden shadow-lg">
+              <img 
+                src="/images/studiopic5.png" 
+                alt="Additional studio equipment and setup"
+                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-podcast-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-4 left-4">
+                  <h4 className="text-podcast-gold font-semibold text-lg">Studio Details</h4>
+                  <p className="text-podcast-accent text-sm">Professional setup</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Studio Video */}
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-podcast-primary rounded-2xl p-8">
+              <div className="text-center mb-6">
+                <h4 className="text-2xl font-bold text-podcast-gold mb-2">Studio Walkthrough</h4>
+                <p className="text-podcast-accent">Take a virtual tour of our professional recording space</p>
+              </div>
+              <div className="relative rounded-xl overflow-hidden">
+                <video 
+                  controls 
+                  className="w-full h-auto"
+                  poster="/images/studiopic1.png"
+                >
+                  <source src="/images/studiovideo.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <p className="text-podcast-accent text-lg mb-4">Ready to experience our professional studio?</p>
+            <a 
+              href="#booking" 
+              className="inline-flex items-center px-8 py-4 bg-podcast-red text-white font-bold rounded-full hover:bg-podcast-red/90 hover:scale-105 transition-all duration-300 group text-lg"
+            >
+              Book Your Session Now
+              <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
@@ -260,7 +377,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-podcast-primary mb-6">Get In Touch</h2>
-            <h3 className="text-3xl text-podcast-secondary font-medium mb-8">Ready to Record Your Next Episode?</h3>
+            <h3 className="text-3xl text-podcast-secondary font-medium mb-8">Ready to Record Your Next Podcast Episode?</h3>
             <div className="w-24 h-1 bg-gradient-to-r from-podcast-red to-podcast-gold mx-auto rounded-full"></div>
           </div>
           
@@ -272,11 +389,11 @@ export default function Home() {
                 <div className="space-y-2 text-gray-600">
                                      <p className="flex items-center">
                      <span className="text-podcast-red mr-3">📍</span>
-                     Trashcan Records Studio, 123 Underground Ave, Providence, RI 02903
+                     Trashcan Records Podcast Studio, 123 Podcast Ave, Providence, RI 02903
                    </p>
                    <p className="flex items-center">
                      <span className="text-podcast-red mr-3">📞</span>
-                     (401) 555-ROCK
+                     (401) 555-CAST
                    </p>
                    <p className="flex items-center">
                      <span className="text-podcast-red mr-3">📧</span>
@@ -316,9 +433,9 @@ export default function Home() {
                 />
                 <select className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-podcast-accent">
                   <option>Select Package</option>
-                  <option>Solo Creator ($25/hr)</option>
-                  <option>Duo/Interview ($40/hr)</option>
-                  <option>Group Recording ($60/hr)</option>
+                  <option>Solo Podcaster ($25/hr)</option>
+                  <option>Interview/Co-Host ($40/hr)</option>
+                  <option>Panel/Group Cast ($60/hr)</option>
                 </select>
                 <textarea 
                   placeholder="Tell us about your podcast project..." 

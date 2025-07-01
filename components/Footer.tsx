@@ -9,10 +9,10 @@ export const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-6 h-6 bg-podcast-red rounded-full animate-pulse-slow"></div>
-              <h3 className="text-xl font-bold">Trashcan Records Studio</h3>
+              <h3 className="text-xl font-bold">Trashcan Records Podcast Studio</h3>
             </div>
             <p className="text-podcast-accent mb-4">
-              Underground recording studio where raw talent meets professional sound.
+              Professional podcast studio where authentic voices meet crystal-clear sound.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-podcast-accent hover:text-podcast-gold transition-colors">
@@ -40,7 +40,7 @@ export const Footer = () => {
               <li><a href="#about" className="text-podcast-accent hover:text-podcast-gold transition-colors">About the Studio</a></li>
               <li><a href="#features" className="text-podcast-accent hover:text-podcast-gold transition-colors">Studio Features</a></li>
               <li><a href="#booking" className="text-podcast-accent hover:text-podcast-gold transition-colors">Book a Session</a></li>
-              <li><a href="#rates" className="text-podcast-accent hover:text-podcast-gold transition-colors">Rates & Packages</a></li>
+              <li><a href="#booking" className="text-podcast-accent hover:text-podcast-gold transition-colors">Podcast Packages</a></li>
             </ul>
           </div>
           
@@ -48,17 +48,17 @@ export const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-2 text-podcast-accent">
-              <p>📍 Trashcan Records Studio</p>
-              <p>123 Underground Ave</p>
+              <p>📍 Trashcan Records Podcast Studio</p>
+              <p>123 Podcast Ave</p>
               <p>Providence, RI 02903</p>
               <p>📧 studio@trashcanrecords.com</p>
-              <p>📞 (401) 555-ROCK</p>
+              <p>📞 (401) 555-CAST</p>
             </div>
           </div>
         </div>
         
         <div className="border-t border-podcast-secondary mt-8 pt-8 text-center text-podcast-accent">
-          <p>&copy; 2024 Trashcan Records Studio. All rights reserved.</p>
+          <p>&copy; 2024 Trashcan Records Podcast Studio. All rights reserved.</p>
         </div>
       </div>
     </footer>

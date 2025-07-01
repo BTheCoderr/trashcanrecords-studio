@@ -15,6 +15,7 @@ export const Header = () => {
           <div className="hidden md:flex items-center space-x-8">
             <a href="#about" className="text-podcast-gold hover:text-podcast-accent transition-colors">About</a>
             <a href="#features" className="text-podcast-gold hover:text-podcast-accent transition-colors">Features</a>
+            <a href="#gallery" className="text-podcast-gold hover:text-podcast-accent transition-colors">Gallery</a>
             <a href="#booking" className="text-podcast-gold hover:text-podcast-accent transition-colors">Book Studio</a>
             <a href="#contact" className="text-podcast-gold hover:text-podcast-accent transition-colors">Contact</a>
           </div>
