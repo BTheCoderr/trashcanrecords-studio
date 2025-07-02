@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Trashcan Records Studio",
-  description: "Professional podcast & media studio in Providence's Innovation District",
+  description: "Professional podcast & media studio in Providence&#39;s Innovation District",
 };
 
 export default function RootLayout({

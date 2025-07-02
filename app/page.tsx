@@ -33,7 +33,7 @@ export default function Home() {
             </h1>
             
             <p className="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
-              Professional podcast & media studio in Providence's Innovation District.<br />
+              Professional podcast & media studio in Providence&#39;s Innovation District.<br />
               <span className="text-purple-300">Where creativity meets cutting-edge technology.</span>
             </p>
             
@@ -81,7 +81,7 @@ export default function Home() {
               PROFESSIONAL PODCAST STUDIO
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Located in Providence's Innovation District within the CIC building, <span className="text-purple-400 font-semibold">Trashcan Records Studio</span> 
+              Located in Providence&#39;s Innovation District within the CIC building, <span className="text-purple-400 font-semibold">Trashcan Records Studio</span> 
               provides a professional podcast recording space perfect for content creators, interviews, 
               and media productions.
             </p>
