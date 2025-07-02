@@ -33,8 +33,8 @@ export default function Home() {
       return;
     }
     
-    // On production (Netlify), the form will be processed normally
-    // The setIsSubmitting(false) will happen after redirect
+    // On production (Netlify), let the form submit naturally
+    // The action="/thank-you" will handle the redirect
   };
 
   return (
@@ -437,6 +437,7 @@ export default function Home() {
                 <form 
                   name="contact" 
                   method="POST" 
+                  action="/thank-you"
                   data-netlify="true" 
                   data-netlify-honeypot="bot-field"
                   onSubmit={handleSubmit}

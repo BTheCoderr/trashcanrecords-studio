@@ -2,26 +2,12 @@
   publish = "out"
   command = "npm run build"
 
-# Form submission redirect
-[[redirects]]
-  from = "/"
-  to = "/thank-you"
-  status = 200
-  conditions = {Role = ["form-submission"]}
-
-# Catch-all for client-side routing
+# Catch-all for client-side routing - handle Next.js routes
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-# Form settings
-[forms]
-  # Set up form notifications
-  [forms.contact]
-    name = "Contact Form"
-    redirect = "/thank-you"
-    
 # Build settings for Next.js static export
 [build.environment]
   NODE_VERSION = "18" 
