@@ -1,11 +1,42 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import Image from 'next/image'
 
 export default function Home() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    setIsSubmitting(true);
+    
+    // Check if we're on localhost (for local testing)
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      e.preventDefault();
+      
+      // Simulate form submission for local testing
+      setTimeout(() => {
+        alert('Form submitted successfully! (Local testing mode)\n\nThis form will work properly when deployed to Netlify.');
+        setIsSubmitting(false);
+        
+        // Get form data for local testing
+        const formData = new FormData(e.currentTarget);
+        console.log('Form data (local test):', {
+          name: formData.get('name'),
+          email: formData.get('email'),
+          phone: formData.get('phone'),
+          'booking-date': formData.get('booking-date'),
+          message: formData.get('message')
+        });
+      }, 1000);
+      return;
+    }
+    
+    // On production (Netlify), the form will be processed normally
+    // The setIsSubmitting(false) will happen after redirect
+  };
+
   return (
     <div className="min-h-screen bg-black">
       <Header />
@@ -408,6 +439,7 @@ export default function Home() {
                   method="POST" 
                   data-netlify="true" 
                   data-netlify-honeypot="bot-field"
+                  onSubmit={handleSubmit}
                   className="space-y-6"
                 >
                   {/* Hidden input for Netlify */}
@@ -471,9 +503,14 @@ export default function Home() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full px-6 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl text-lg"
+                    disabled={isSubmitting}
+                    className={`w-full px-6 py-4 text-white font-bold rounded-2xl transition-all duration-300 shadow-2xl text-lg ${
+                      isSubmitting 
+                        ? 'bg-gray-600 cursor-not-allowed' 
+                        : 'bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 transform hover:scale-105'
+                    }`}
                   >
-                    🚀 SEND MESSAGE
+                    {isSubmitting ? '⏳ SENDING...' : '🚀 SEND MESSAGE'}
                   </button>
                 </form>
               </div>
