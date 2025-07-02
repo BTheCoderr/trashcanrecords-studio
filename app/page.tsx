@@ -197,93 +197,92 @@ export default function Home() {
       </section>
 
       {/* Gallery Section */}
-      <section id="gallery" className="py-20 bg-gray-50">
+      <section id="gallery" className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Studio Gallery</h2>
-            <p className="text-xl text-gray-600">Take a look inside our professional creative space</p>
+            <h2 className="text-5xl font-black text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text mb-6">STUDIO GALLERY</h2>
+            <p className="text-xl text-gray-300">Take a look inside our professional creative space</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="relative group overflow-hidden rounded-2xl">
+            {/* FEATURED: Conference Room Setup - Now First */}
+            <div className="relative group overflow-hidden rounded-3xl border border-purple-500/20 hover:border-purple-400/40 transition-all duration-500 lg:col-span-2">
+              <Image
+                src="/images/studiopic2.jpg"
+                alt="Professional conference room setup with podcast recording equipment and seating for up to 15 guests"
+                width={800}
+                height={400}
+                className="w-full h-80 object-contain bg-gray-800 transition-transform group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-purple-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
+                <p className="text-white font-bold text-xl bg-purple-600/80 px-4 py-2 rounded-xl backdrop-blur-sm">🎙️ MAIN CONFERENCE ROOM</p>
+              </div>
+            </div>
+
+            <div className="relative group overflow-hidden rounded-3xl border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-500">
               <Image
                 src="/images/studiopic1.png"
                 alt="Professional podcast setup with microphones and acoustic treatment"
                 width={400}
-                height={256}
-                className="w-full h-64 object-cover transition-transform group-hover:scale-105"
-                style={{ width: "auto", height: "auto" }}
+                height={300}
+                className="w-full h-80 object-contain bg-gray-800 transition-transform group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                <p className="text-white font-semibold">Professional Setup</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
+                <p className="text-white font-bold bg-cyan-600/80 px-4 py-2 rounded-xl backdrop-blur-sm">Professional Setup</p>
               </div>
             </div>
 
-            <div className="relative group overflow-hidden rounded-2xl">
-              <Image
-                src="/images/studiopic2.jpg"
-                alt="Studio recording space with professional audio equipment"
-                width={400}
-                height={256}
-                className="w-full h-64 object-cover transition-transform group-hover:scale-105"
-                style={{ width: "auto", height: "auto" }}
-              />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                <p className="text-white font-semibold">Audio Equipment</p>
-              </div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-2xl">
-              <Image
-                src="/images/studiopic3.jpg"
-                alt="Creative workspace with modern lighting and comfortable seating"
-                width={400}
-                height={256}
-                className="w-full h-64 object-cover transition-transform group-hover:scale-105"
-                style={{ width: "auto", height: "auto" }}
-              />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                <p className="text-white font-semibold">Creative Space</p>
-              </div>
-            </div>
-
-            <div className="relative group overflow-hidden rounded-2xl">
+            <div className="relative group overflow-hidden rounded-3xl border border-pink-500/20 hover:border-pink-400/40 transition-all duration-500">
               <Image
                 src="/images/studiopic4.png"
                 alt="Modern studio environment with professional recording capabilities"
                 width={400}
-                height={256}
-                className="w-full h-64 object-cover transition-transform group-hover:scale-105"
-                style={{ width: "auto", height: "auto" }}
+                height={300}
+                className="w-full h-80 object-contain bg-gray-800 transition-transform group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                <p className="text-white font-semibold">Modern Environment</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-pink-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
+                <p className="text-white font-bold bg-pink-600/80 px-4 py-2 rounded-xl backdrop-blur-sm">Modern Environment</p>
               </div>
             </div>
 
-            <div className="relative group overflow-hidden rounded-2xl">
+            <div className="relative group overflow-hidden rounded-3xl border border-green-500/20 hover:border-green-400/40 transition-all duration-500">
+              <Image
+                src="/images/studiopic3.jpg"
+                alt="Creative workspace with modern lighting and comfortable seating"
+                width={400}
+                height={300}
+                className="w-full h-80 object-contain bg-gray-800 transition-transform group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-green-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
+                <p className="text-white font-bold bg-green-600/80 px-4 py-2 rounded-xl backdrop-blur-sm">Creative Space</p>
+              </div>
+            </div>
+
+            <div className="relative group overflow-hidden rounded-3xl border border-yellow-500/20 hover:border-yellow-400/40 transition-all duration-500">
               <Image
                 src="/images/studiopic5.png"
                 alt="Flexible studio space ready for various types of content creation"
                 width={400}
-                height={256}
-                className="w-full h-64 object-cover transition-transform group-hover:scale-105"
-                style={{ width: "auto", height: "auto" }}
+                height={300}
+                className="w-full h-80 object-contain bg-gray-800 transition-transform group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                <p className="text-white font-semibold">Flexible Setup</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-yellow-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
+                <p className="text-white font-bold bg-yellow-600/80 px-4 py-2 rounded-xl backdrop-blur-sm">Flexible Setup</p>
               </div>
             </div>
 
-            <div className="relative group overflow-hidden rounded-2xl">
+            <div className="relative group overflow-hidden rounded-3xl border border-indigo-500/20 hover:border-indigo-400/40 transition-all duration-500">
               <video
-                className="w-full h-64 object-cover"
+                className="w-full h-80 object-contain bg-gray-800"
                 controls
-                poster="/images/studiopic1.png"
+                poster="/images/studiopic2.jpg"
               >
                 <source src="/images/studiovideo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
+              <div className="absolute top-4 left-4 bg-indigo-600/80 px-3 py-1 rounded-xl backdrop-blur-sm">
+                <p className="text-white font-bold text-sm">🎬 STUDIO TOUR</p>
+              </div>
             </div>
           </div>
         </div>
