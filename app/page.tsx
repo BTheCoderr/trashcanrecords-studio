@@ -376,40 +376,43 @@ export default function Home() {
       </section>
 
       {/* Pricing/Booking Section */}
-      <section className="py-20 bg-podcast-primary" id="booking">
+      <section className="py-24 bg-studio-light" id="booking">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-podcast-gold mb-6">Studio Packages</h2>
-            <h3 className="text-3xl text-podcast-accent font-medium mb-8">Choose Your Creative Experience</h3>
-            <div className="w-24 h-1 bg-gradient-to-r from-podcast-red to-podcast-gold mx-auto rounded-full"></div>
+          <div className="text-center mb-20 animate-fade-in">
+            <h2 className="text-5xl md:text-6xl font-bold text-studio-primary mb-6">Studio Packages</h2>
+            <h3 className="text-2xl md:text-3xl text-studio-gray font-light mb-8">Choose Your Creative Experience</h3>
+            <div className="w-24 h-1 bg-gradient-to-r from-studio-accent to-studio-orange mx-auto rounded-full"></div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {packages.map((pkg, index) => (
-              <div key={index} className={`rounded-2xl p-8 ${pkg.popular ? 'bg-podcast-red scale-105 border-4 border-podcast-gold' : 'bg-podcast-secondary'} relative`}>
+              <div key={index} className={`group relative rounded-3xl p-8 transition-all duration-500 hover:-translate-y-4 ${pkg.popular ? 'bg-gradient-to-br from-studio-accent to-studio-purple shadow-modern scale-105 border-2 border-studio-light' : 'bg-white shadow-card hover:shadow-modern border border-studio-light/20'}`}>
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-podcast-gold text-podcast-primary px-4 py-1 rounded-full text-sm font-bold">MOST POPULAR</span>
+                    <span className="bg-gradient-to-r from-studio-orange to-studio-accent text-white px-6 py-2 rounded-full text-sm font-bold shadow-card">MOST POPULAR</span>
                   </div>
                 )}
                 
-                <div className="text-center mb-6">
-                  <h4 className="text-2xl font-bold text-podcast-gold mb-2">{pkg.title}</h4>
-                  <div className="text-4xl font-bold text-white">{pkg.price}</div>
+                <div className="text-center mb-8">
+                  <h4 className={`text-2xl font-bold mb-4 ${pkg.popular ? 'text-white' : 'text-studio-primary'}`}>{pkg.title}</h4>
+                  <div className={`text-5xl font-bold ${pkg.popular ? 'text-white' : 'text-studio-primary'}`}>{pkg.price}</div>
+                  <div className={`text-sm mt-2 ${pkg.popular ? 'text-white/80' : 'text-studio-gray'}`}>per hour</div>
                 </div>
                 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-4 mb-8">
                   {pkg.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-podcast-gold">
-                      <svg className="w-5 h-5 mr-3 text-podcast-gold" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      {feature}
+                    <li key={idx} className={`flex items-center ${pkg.popular ? 'text-white' : 'text-studio-gray'}`}>
+                      <div className={`w-5 h-5 mr-4 rounded-full flex items-center justify-center ${pkg.popular ? 'bg-white/20' : 'bg-studio-accent/10'}`}>
+                        <svg className={`w-3 h-3 ${pkg.popular ? 'text-white' : 'text-studio-accent'}`} fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <span className="font-medium">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 
-                <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${pkg.popular ? 'bg-podcast-gold text-podcast-primary hover:bg-podcast-gold/90' : 'bg-podcast-accent text-white hover:bg-podcast-accent/90'}`}>
+                <button className={`w-full py-4 rounded-2xl font-bold transition-all duration-300 group-hover:scale-105 ${pkg.popular ? 'bg-white text-studio-accent hover:bg-studio-light shadow-card' : 'bg-gradient-to-r from-studio-accent to-studio-purple text-white hover:from-studio-purple hover:to-studio-accent shadow-card'}`}>
                   Book This Package
                 </button>
               </div>
@@ -429,65 +432,86 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-white" id="contact">
+      <section className="py-24 bg-gradient-to-br from-studio-light to-white" id="contact">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-podcast-primary mb-6">Get In Touch</h2>
-            <h3 className="text-3xl text-podcast-secondary font-medium mb-8">Ready to Book Your Creative Space?</h3>
-            <div className="w-24 h-1 bg-gradient-to-r from-podcast-red to-podcast-gold mx-auto rounded-full"></div>
+          <div className="text-center mb-20 animate-fade-in">
+            <h2 className="text-5xl md:text-6xl font-bold text-studio-primary mb-6">Get In Touch</h2>
+            <h3 className="text-2xl md:text-3xl text-studio-gray font-light mb-8">Ready to Book Your Creative Space?</h3>
+            <div className="w-24 h-1 bg-gradient-to-r from-studio-accent to-studio-orange mx-auto rounded-full"></div>
           </div>
           
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div className="space-y-8">
-              <div>
-                <h4 className="text-2xl font-semibold text-podcast-primary mb-4">Studio Location</h4>
-                <div className="space-y-2 text-gray-600">
-                                     <p className="flex items-center">
-                     <span className="text-podcast-red mr-3">📍</span>
-                     Providence Creative Studio, CIC Building, Providence Innovation District, RI
-                   </p>
-                   <p className="flex items-center">
-                     <span className="text-podcast-red mr-3">📞</span>
-                     (401) 217-9799
-                   </p>
-                   <p className="flex items-center">
-                     <span className="text-podcast-red mr-3">📧</span>
-                     trashcanrecords514@gmail.com
-                   </p>
+              <div className="bg-white rounded-3xl p-8 shadow-card">
+                <h4 className="text-2xl font-bold text-studio-primary mb-6">Studio Location</h4>
+                <div className="space-y-4 text-studio-gray">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-10 h-10 bg-gradient-to-r from-studio-accent to-studio-purple rounded-2xl flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-white text-lg">📍</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-studio-primary">Providence Creative Studio</p>
+                      <p>CIC Building</p>
+                      <p>Providence Innovation District, RI</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-10 h-10 bg-gradient-to-r from-studio-green to-studio-accent rounded-2xl flex items-center justify-center">
+                      <span className="text-white text-lg">📞</span>
+                    </div>
+                    <a href="tel:4012179799" className="text-studio-primary font-semibold hover:text-studio-accent transition-colors duration-300">(401) 217-9799</a>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-10 h-10 bg-gradient-to-r from-studio-orange to-studio-purple rounded-2xl flex items-center justify-center">
+                      <span className="text-white text-lg">📧</span>
+                    </div>
+                    <a href="mailto:trashcanrecords514@gmail.com" className="text-studio-primary font-semibold hover:text-studio-accent transition-colors duration-300 break-all">trashcanrecords514@gmail.com</a>
+                  </div>
                 </div>
               </div>
               
-              <div>
-                <h4 className="text-2xl font-semibold text-podcast-primary mb-4">Studio Hours</h4>
-                <div className="space-y-1 text-gray-600">
-                  <p>Monday - Friday: 9:00 AM - 9:00 PM</p>
-                  <p>Saturday: 10:00 AM - 6:00 PM</p>
-                  <p>Sunday: 12:00 PM - 6:00 PM</p>
+              <div className="bg-white rounded-3xl p-8 shadow-card">
+                <h4 className="text-2xl font-bold text-studio-primary mb-6">Studio Hours</h4>
+                <div className="space-y-3 text-studio-gray">
+                  <div className="flex justify-between">
+                    <span className="font-medium">Monday - Friday</span>
+                    <span>9:00 AM - 9:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium">Saturday</span>
+                    <span>10:00 AM - 6:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium">Sunday</span>
+                    <span>12:00 PM - 6:00 PM</span>
+                  </div>
                 </div>
               </div>
             </div>
             
             {/* Quick Contact Form */}
-            <div className="bg-gray-50 rounded-2xl p-8">
-              <h4 className="text-2xl font-semibold text-podcast-primary mb-6">Quick Booking Inquiry</h4>
-              <form className="space-y-4">
-                <input 
-                  type="text" 
-                  placeholder="Your Name" 
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-podcast-accent"
-                />
-                <input 
-                  type="email" 
-                  placeholder="Email Address" 
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-podcast-accent"
-                />
+            <div className="bg-white rounded-3xl p-8 shadow-modern border border-studio-light/20">
+              <h4 className="text-2xl font-bold text-studio-primary mb-8">Quick Booking Inquiry</h4>
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <input 
+                    type="text" 
+                    placeholder="Your Name" 
+                    className="w-full p-4 border border-studio-light/30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-studio-accent focus:border-transparent transition-all duration-300"
+                  />
+                  <input 
+                    type="email" 
+                    placeholder="Email Address" 
+                    className="w-full p-4 border border-studio-light/30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-studio-accent focus:border-transparent transition-all duration-300"
+                  />
+                </div>
                 <input 
                   type="tel" 
                   placeholder="Phone Number" 
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-podcast-accent"
+                  className="w-full p-4 border border-studio-light/30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-studio-accent focus:border-transparent transition-all duration-300"
                 />
-                <select className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-podcast-accent">
+                <select className="w-full p-4 border border-studio-light/30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-studio-accent focus:border-transparent transition-all duration-300 bg-white">
                   <option>Select Package</option>
                   <option>Content Creation ($75/hr)</option>
                   <option>Media Production ($75/hr)</option>
@@ -496,11 +520,11 @@ export default function Home() {
                 <textarea 
                   placeholder="Tell us about your media project or event..." 
                   rows={4}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-podcast-accent"
+                  className="w-full p-4 border border-studio-light/30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-studio-accent focus:border-transparent transition-all duration-300 resize-none"
                 ></textarea>
                 <button 
                   type="submit" 
-                  className="w-full bg-podcast-red text-white py-3 rounded-lg font-semibold hover:bg-podcast-red/90 transition-colors"
+                  className="w-full bg-gradient-to-r from-studio-accent to-studio-purple text-white py-4 rounded-2xl font-bold hover:from-studio-purple hover:to-studio-accent transform hover:scale-105 transition-all duration-300 shadow-card"
                 >
                   Send Inquiry
                 </button>
