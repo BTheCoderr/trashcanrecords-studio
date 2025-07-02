@@ -11,21 +11,49 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        'podcast': {
-          'primary': '#1B263B',    // Deep navy blue
-          'secondary': '#415A77',  // Medium blue-gray
-          'accent': '#778DA9',     // Light blue-gray
-          'gold': '#E0E1DD',       // Off-white/cream
-          'highlight': '#0D1B2A',  // Very dark blue
-          'red': '#C5282F',        // Podcast recording red
+        'studio': {
+          'primary': '#0F172A',      // Rich dark slate
+          'secondary': '#1E293B',    // Medium slate  
+          'accent': '#3B82F6',       // Modern blue
+          'light': '#F8FAFC',        // Clean white
+          'gray': '#64748B',         // Professional gray
+          'orange': '#F97316',       // Vibrant orange accent
+          'green': '#10B981',        // Modern green
+          'purple': '#8B5CF6',       // Contemporary purple
         }
       },
       fontFamily: {
-        'podcast': ['Inter', 'system-ui', 'sans-serif'],
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'display': ['Inter', 'system-ui', 'sans-serif'],
       },
       animation: {
+        'fade-in': 'fadeIn 0.6s ease-out',
+        'slide-up': 'slideUp 0.6s ease-out',
         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'bounce-slow': 'bounce 2s infinite',
+        'float': 'float 3s ease-in-out infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(40px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-10px)' },
+        }
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      boxShadow: {
+        'modern': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
       }
     },
   },
