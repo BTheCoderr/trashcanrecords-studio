@@ -1,534 +1,436 @@
 'use client';
 
 import React from 'react';
-import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
+import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
+import Image from 'next/image'
 
 export default function Home() {
-  const studioFeatures = [
-    {
-      icon: '📶',
-      title: 'High-Speed WiFi',
-      description: 'Reliable, fast internet connection perfect for streaming, video calls, and content creation needs.',
-    },
-    {
-      icon: '🪑',
-      title: 'Flexible Furniture Setup',
-      description: 'Tables and chairs available upon request to configure the space exactly for your event or production.',
-    },
-    {
-      icon: '🧼',
-      title: 'Professional Cleaning',
-      description: 'Professionally cleaned twice daily (morning and evening) with sanitizer and disinfecting supplies provided.',
-    },
-    {
-      icon: '🤫',
-      title: 'Quiet Professional Space',
-      description: 'Ideal environment for podcasts, recordings, meetings, and focused creative work.',
-    },
-    {
-      icon: '🛗',
-      title: 'Easy Access',
-      description: 'Centrally located in Providence Innovation District with elevator access and on-site host assistance.',
-    },
-    {
-      icon: '👨‍💼',
-      title: 'On-Site Support',
-      description: 'Host available to greet you upon arrival and provide assistance throughout your session.',
-    }
-  ];
-
-  const packages = [
-    {
-      title: 'Content Creation',
-      price: '$75/hour',
-      features: [
-        '4-hour minimum booking',
-        'High-speed WiFi included',
-        'Tables & chairs setup',
-        'Professional daily cleaning',
-        'On-site host assistance',
-        'Full restroom access'
-      ],
-      popular: false
-    },
-    {
-      title: 'Media Production',
-      price: '$75/hour',
-      features: [
-        '4-hour minimum booking',
-        'Flexible space configuration',
-        'Quiet recording environment',
-        'Elevator access included',
-        'Professional cleaning',
-        'Host support throughout',
-        'Perfect for film/photo shoots'
-      ],
-      popular: true
-    },
-    {
-      title: 'Events & Meetings',
-      price: '$75/hour',
-      features: [
-        '4-hour minimum booking',
-        'Up to 250 guest capacity',
-        'Central Providence location',
-        'Tables & chairs provided',
-        'High-speed internet',
-        'Professional venue support',
-        'Ideal for networking events'
-      ],
-      popular: false
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-black">
       <Header />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-studio-primary via-studio-secondary to-studio-primary overflow-hidden">
-        {/* Modern Background Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-studio-accent/10 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-studio-orange/10 rounded-full blur-3xl animate-float delay-1000"></div>
-          <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-studio-purple/10 rounded-full blur-3xl animate-float delay-500"></div>
+      <section className="relative bg-gradient-to-br from-black via-gray-900 to-black text-white pt-24 overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center space-y-12 max-w-6xl mx-auto animate-fade-in">
-            {/* Status Indicator */}
-            <div className="flex items-center justify-center space-x-4 mb-8">
-              <div className="flex items-center space-x-2 bg-studio-light/10 backdrop-blur-sm rounded-full px-6 py-3 border border-studio-light/20">
-                <div className="w-3 h-3 bg-studio-green rounded-full animate-pulse"></div>
-                <span className="text-studio-light font-medium text-sm tracking-wide">AVAILABLE NOW</span>
-                <div className="w-3 h-3 bg-studio-green rounded-full animate-pulse"></div>
-              </div>
+        <div className="relative max-w-7xl mx-auto px-6 py-20">
+          <div className="text-center">
+            <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 mb-8 backdrop-blur-sm">
+              <span className="text-sm font-medium text-purple-200">🎙️ Available Now</span>
+              <div className="w-2 h-2 bg-cyan-400 rounded-full ml-3 animate-ping"></div>
             </div>
             
-            <div className="space-y-8">
-              <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold text-studio-light leading-none tracking-tight">
-                CREATIVE
-                <br />
-                <span className="bg-gradient-to-r from-studio-accent to-studio-purple bg-clip-text text-transparent">STUDIO</span>
-              </h1>
-              
-              <div className="w-24 h-1 bg-gradient-to-r from-studio-accent to-studio-orange mx-auto rounded-full"></div>
-              
-              <p className="text-xl md:text-2xl text-studio-light/90 font-light max-w-3xl mx-auto leading-relaxed">
-                Professional media & event space in 
-                <span className="text-studio-accent font-semibold"> Providence's Innovation District</span>. 
-                <br className="hidden md:block" />
-                Where creativity meets cutting-edge technology.
-              </p>
+            <h1 className="text-6xl lg:text-8xl font-black mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
+              TRASHCAN<br />
+              <span className="text-5xl lg:text-7xl">RECORDS</span><br />
+              <span className="text-4xl lg:text-6xl font-light">STUDIO</span>
+            </h1>
+            
+            <p className="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
+              Professional podcast & media studio in Providence's Innovation District.<br />
+              <span className="text-purple-300">Where creativity meets cutting-edge technology.</span>
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <a 
+                href="#booking" 
+                className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25"
+              >
+                <span className="relative z-10">🎙️ BOOK STUDIO NOW →</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-opacity"></div>
+              </a>
+              <a 
+                href="https://www.peerspace.com/pages/listings/686424eddba671f73a7afbc9" 
+                target="_blank"
+                className="inline-flex items-center px-8 py-4 bg-black/50 hover:bg-black/70 text-white font-semibold rounded-2xl transition-all duration-300 border border-cyan-500/50 hover:border-cyan-400 backdrop-blur-sm hover:shadow-cyan-500/25 hover:shadow-lg"
+              >
+                View on Peerspace ↗
+              </a>
             </div>
             
-            {/* Modern Call to Action */}
-            <div className="pt-12 space-y-8">
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <a 
-                  href="#booking" 
-                  className="group relative overflow-hidden bg-gradient-to-r from-studio-accent to-studio-purple text-white font-semibold px-10 py-4 rounded-2xl hover:scale-105 transition-all duration-300 shadow-modern"
-                >
-                  <span className="relative z-10 flex items-center">
-                    Book Studio Now
-                    <svg className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-studio-purple to-studio-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </a>
-                
-                <a 
-                  href="https://www.peerspace.com/pages/listings/686424eddba671f73a7afbc9?utm_medium=email&utm_source=transactional&utm_campaign=prod-notifications" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative overflow-hidden bg-studio-light text-studio-primary font-semibold px-10 py-4 rounded-2xl hover:scale-105 transition-all duration-300 shadow-modern"
-                >
-                  <span className="relative z-10 flex items-center">
-                    Book on Peerspace
-                    <svg className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </span>
-                  <div className="absolute inset-0 bg-studio-orange opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </a>
+            {/* Key Stats */}
+            <div className="grid grid-cols-3 gap-8 mt-20 pt-12 border-t border-gradient-to-r from-transparent via-purple-500/50 to-transparent">
+              <div className="text-center group">
+                <div className="text-4xl font-black text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text mb-2 group-hover:scale-110 transition-transform">$75</div>
+                <div className="text-gray-300 text-sm uppercase tracking-wider">Per Hour</div>
               </div>
-              
-              <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-studio-light/80 text-sm">
-                <div className="flex items-center space-x-2">
-                  <svg className="w-5 h-5 text-studio-green" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span>$75/hour</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <svg className="w-5 h-5 text-studio-green" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span>4-hour minimum</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <svg className="w-5 h-5 text-studio-green" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span>Up to 250 guests</span>
-                </div>
+              <div className="text-center group">
+                <div className="text-4xl font-black text-transparent bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text mb-2 group-hover:scale-110 transition-transform">2hrs</div>
+                <div className="text-gray-300 text-sm uppercase tracking-wider">Minimum</div>
+              </div>
+              <div className="text-center group">
+                <div className="text-4xl font-black text-transparent bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text mb-2 group-hover:scale-110 transition-transform">15</div>
+                <div className="text-gray-300 text-sm uppercase tracking-wider">Max Guests</div>
               </div>
             </div>
           </div>
-        </div>
-        
-        {/* Modern scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <svg className="w-6 h-6 text-studio-light/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-24 bg-studio-light" id="about">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-20 animate-fade-in">
-            <div className="flex items-center justify-center gap-4 mb-8">
-              <div className="w-12 h-12 bg-gradient-to-r from-studio-accent to-studio-purple rounded-2xl flex items-center justify-center">
-                <span className="text-2xl">🏢</span>
-              </div>
-              <h2 className="text-5xl md:text-6xl font-bold text-studio-primary">Providence Creative Studio</h2>
-            </div>
-            <h3 className="text-2xl md:text-3xl text-studio-gray font-light mb-8">Professional Media & Event Space</h3>
-            <div className="w-24 h-1 bg-gradient-to-r from-studio-accent to-studio-orange mx-auto rounded-full"></div>
-          </div>
-          
-          <div className="max-w-5xl mx-auto space-y-16">
-            <p className="text-xl md:text-2xl text-studio-gray leading-relaxed text-center">
-              Located in <span className="text-studio-accent font-semibold">Providence's Innovation District</span> within the CIC building, 
-              our creative studio provides a stylish, flexible space perfect for media productions, content creation, meetings, and intimate events.
+      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-black text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text mb-8">
+              PROFESSIONAL PODCAST STUDIO
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Located in Providence's Innovation District within the CIC building, <span className="text-purple-400 font-semibold">Trashcan Records Studio</span> 
+              provides a professional podcast recording space perfect for content creators, interviews, 
+              and media productions.
             </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
-              <div className="group text-center p-8 bg-white rounded-3xl shadow-card hover:shadow-modern transition-all duration-300 hover:-translate-y-2">
-                <div className="w-16 h-16 bg-gradient-to-r from-studio-accent to-studio-purple rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl text-white">🎯</span>
-                </div>
-                <h4 className="text-xl font-semibold text-studio-primary mb-3">Professional Quality</h4>
-                <p className="text-studio-gray leading-relaxed">Industry-standard equipment and acoustically treated space for perfect results.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-500 hover:transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:animate-pulse">
+                <span className="text-3xl">🎯</span>
               </div>
-              
-              <div className="group text-center p-8 bg-white rounded-3xl shadow-card hover:shadow-modern transition-all duration-300 hover:-translate-y-2">
-                <div className="w-16 h-16 bg-gradient-to-r from-studio-green to-studio-accent rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl text-white">🤝</span>
-                </div>
-                <h4 className="text-xl font-semibold text-studio-primary mb-3">Creator Focused</h4>
-                <p className="text-studio-gray leading-relaxed">Supporting content creators and entrepreneurs with flexible, professional space.</p>
+              <h3 className="text-2xl font-bold text-white mb-4">Professional Quality</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Industry-standard equipment and acoustically treated space for perfect results.
+              </p>
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
+
+            <div className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl rounded-3xl p-8 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-500 hover:transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:animate-pulse">
+                <span className="text-3xl">⚡</span>
               </div>
-              
-              <div className="group text-center p-8 bg-white rounded-3xl shadow-card hover:shadow-modern transition-all duration-300 hover:-translate-y-2">
-                <div className="w-16 h-16 bg-gradient-to-r from-studio-orange to-studio-purple rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl text-white">⚡</span>
-                </div>
-                <h4 className="text-xl font-semibold text-studio-primary mb-3">Always Ready</h4>
-                <p className="text-studio-gray leading-relaxed">Pre-configured setup means you can start creating immediately upon arrival.</p>
+              <h3 className="text-2xl font-bold text-white mb-4">Creator Focused</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Supporting content creators and entrepreneurs with flexible, professional space.
+              </p>
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
+
+            <div className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl rounded-3xl p-8 border border-green-500/20 hover:border-green-400/40 transition-all duration-500 hover:transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6 group-hover:animate-pulse">
+                <span className="text-3xl">⏰</span>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Always Ready</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Pre-configured setup means you can start creating immediately upon arrival.
+              </p>
+              <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-black text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text mb-6">STUDIO FEATURES</h2>
+            <p className="text-xl text-gray-300">Everything You Need for Professional Podcast Production</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="group flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="text-4xl group-hover:animate-bounce">📶</div>
+              <div>
+                <h3 className="text-xl font-bold text-white mb-2">High-Speed WiFi</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Reliable, fast internet connection perfect for streaming, video calls, and content creation needs.
+                </p>
+              </div>
+            </div>
+
+            <div className="group flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="text-4xl group-hover:animate-bounce">🪑</div>
+              <div>
+                <h3 className="text-xl font-bold text-white mb-2">Flexible Furniture Setup</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Tables and chairs available upon request to configure the space exactly for your event or production.
+                </p>
+              </div>
+            </div>
+
+            <div className="group flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-pink-500/20 hover:border-pink-400/40 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="text-4xl group-hover:animate-bounce">✨</div>
+              <div>
+                <h3 className="text-xl font-bold text-white mb-2">Professional Cleaning</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Professionally cleaned twice daily (morning and evening) with sanitizer and disinfecting supplies provided.
+                </p>
+              </div>
+            </div>
+
+            <div className="group flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-green-500/20 hover:border-green-400/40 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="text-4xl group-hover:animate-bounce">🤫</div>
+              <div>
+                <h3 className="text-xl font-bold text-white mb-2">Quiet Professional Space</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Ideal environment for podcasts, recordings, meetings, and focused creative work.
+                </p>
+              </div>
+            </div>
+
+            <div className="group flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-yellow-500/20 hover:border-yellow-400/40 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="text-4xl group-hover:animate-bounce">🏢</div>
+              <div>
+                <h3 className="text-xl font-bold text-white mb-2">Easy Access</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Centrally located in Providence Innovation District with elevator access and on-site host assistance.
+                </p>
+              </div>
+            </div>
+
+            <div className="group flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-indigo-500/20 hover:border-indigo-400/40 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="text-4xl group-hover:animate-bounce">👥</div>
+              <div>
+                <h3 className="text-xl font-bold text-white mb-2">On-Site Support</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Host available to greet you upon arrival and provide assistance throughout your session.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Studio Features */}
-      <section className="py-24 bg-gradient-to-br from-studio-light via-white to-studio-accent/5" id="features">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-20 animate-fade-in">
-            <h2 className="text-5xl md:text-6xl font-bold text-studio-primary mb-6">Studio Features</h2>
-            <h3 className="text-2xl md:text-3xl text-studio-gray font-light mb-8">Everything You Need for Professional Media & Events</h3>
-            <div className="w-24 h-1 bg-gradient-to-r from-studio-accent to-studio-orange mx-auto rounded-full"></div>
+      {/* Gallery Section */}
+      <section id="gallery" className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Studio Gallery</h2>
+            <p className="text-xl text-gray-600">Take a look inside our professional creative space</p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {studioFeatures.map((feature, index) => (
-              <div key={index} className="group bg-white rounded-3xl p-8 shadow-card hover:shadow-modern transition-all duration-500 hover:-translate-y-3 border border-studio-light/50">
-                <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
-                <h4 className="text-xl font-bold text-studio-primary mb-4 group-hover:text-studio-accent transition-colors duration-300">{feature.title}</h4>
-                <p className="text-studio-gray leading-relaxed">{feature.description}</p>
-                <div className="mt-6 w-full h-1 bg-gradient-to-r from-studio-accent/20 to-studio-purple/20 rounded-full group-hover:from-studio-accent group-hover:to-studio-purple transition-all duration-300"></div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="relative group overflow-hidden rounded-2xl">
+              <Image
+                src="/images/studiopic1.png"
+                alt="Professional podcast setup with microphones and acoustic treatment"
+                width={400}
+                height={256}
+                className="w-full h-64 object-cover transition-transform group-hover:scale-105"
+                style={{ width: "auto", height: "auto" }}
+              />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <p className="text-white font-semibold">Professional Setup</p>
               </div>
-            ))}
+            </div>
+
+            <div className="relative group overflow-hidden rounded-2xl">
+              <Image
+                src="/images/studiopic2.jpg"
+                alt="Studio recording space with professional audio equipment"
+                width={400}
+                height={256}
+                className="w-full h-64 object-cover transition-transform group-hover:scale-105"
+                style={{ width: "auto", height: "auto" }}
+              />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <p className="text-white font-semibold">Audio Equipment</p>
+              </div>
+            </div>
+
+            <div className="relative group overflow-hidden rounded-2xl">
+              <Image
+                src="/images/studiopic3.jpg"
+                alt="Creative workspace with modern lighting and comfortable seating"
+                width={400}
+                height={256}
+                className="w-full h-64 object-cover transition-transform group-hover:scale-105"
+                style={{ width: "auto", height: "auto" }}
+              />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <p className="text-white font-semibold">Creative Space</p>
+              </div>
+            </div>
+
+            <div className="relative group overflow-hidden rounded-2xl">
+              <Image
+                src="/images/studiopic4.png"
+                alt="Modern studio environment with professional recording capabilities"
+                width={400}
+                height={256}
+                className="w-full h-64 object-cover transition-transform group-hover:scale-105"
+                style={{ width: "auto", height: "auto" }}
+              />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <p className="text-white font-semibold">Modern Environment</p>
+              </div>
+            </div>
+
+            <div className="relative group overflow-hidden rounded-2xl">
+              <Image
+                src="/images/studiopic5.png"
+                alt="Flexible studio space ready for various types of content creation"
+                width={400}
+                height={256}
+                className="w-full h-64 object-cover transition-transform group-hover:scale-105"
+                style={{ width: "auto", height: "auto" }}
+              />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <p className="text-white font-semibold">Flexible Setup</p>
+              </div>
+            </div>
+
+            <div className="relative group overflow-hidden rounded-2xl">
+              <video
+                className="w-full h-64 object-cover"
+                controls
+                poster="/images/studiopic1.png"
+              >
+                <source src="/images/studiovideo.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Studio Gallery Section */}
-      <section className="py-24 bg-gradient-to-br from-studio-primary via-studio-secondary to-studio-primary" id="gallery">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-20 animate-fade-in">
-            <h2 className="text-5xl md:text-6xl font-bold text-studio-light mb-6">Inside Our Studio</h2>
-            <h3 className="text-2xl md:text-3xl text-studio-light/80 font-light mb-8">Professional Setup & Equipment</h3>
-            <div className="w-24 h-1 bg-gradient-to-r from-studio-accent to-studio-orange mx-auto rounded-full"></div>
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-black text-transparent bg-gradient-to-r from-green-400 via-emerald-400 to-cyan-400 bg-clip-text mb-6">STUDIO RENTAL</h2>
+            <p className="text-xl text-gray-300">Simple, Transparent Pricing</p>
           </div>
-          
-          {/* Main Studio Images Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
-            <div className="relative group rounded-2xl overflow-hidden shadow-lg">
-              <img 
-                src="/images/studiopic1.png" 
-                alt="Professional podcast recording setup with acoustic treatment"
-                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-podcast-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                 <div className="absolute bottom-4 left-4">
-                   <h4 className="text-podcast-gold font-semibold text-lg">Podcast Recording Room</h4>
-                   <p className="text-podcast-accent text-sm">Acoustically treated for podcast quality</p>
-                 </div>
-              </div>
-            </div>
-            
-            <div className="relative group rounded-2xl overflow-hidden shadow-lg">
-              <img 
-                src="/images/studiopic2.jpg" 
-                alt="Professional microphones and recording equipment"
-                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-podcast-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                 <div className="absolute bottom-4 left-4">
-                   <h4 className="text-podcast-gold font-semibold text-lg">Podcast Equipment</h4>
-                   <p className="text-podcast-accent text-sm">Professional podcast microphones</p>
-                 </div>
-              </div>
-            </div>
-            
-            <div className="relative group rounded-2xl overflow-hidden shadow-lg">
-              <img 
-                src="/images/studiopic3.jpg" 
-                alt="Studio control room and mixing setup"
-                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-podcast-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-4 left-4">
-                  <h4 className="text-podcast-gold font-semibold text-lg">Control Room</h4>
-                  <p className="text-podcast-accent text-sm">Professional mixing board</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="relative group rounded-2xl overflow-hidden shadow-lg md:col-span-2">
-              <img 
-                src="/images/studiopic4.png" 
-                alt="Full studio view with multiple recording stations"
-                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-podcast-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-4 left-4">
-                  <h4 className="text-podcast-gold font-semibold text-lg">Full Studio View</h4>
-                  <p className="text-podcast-accent text-sm">Multiple recording stations available</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="relative group rounded-2xl overflow-hidden shadow-lg">
-              <img 
-                src="/images/studiopic5.png" 
-                alt="Additional studio equipment and setup"
-                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-podcast-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-4 left-4">
-                  <h4 className="text-podcast-gold font-semibold text-lg">Studio Details</h4>
-                  <p className="text-podcast-accent text-sm">Professional setup</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Studio Video */}
+
           <div className="max-w-4xl mx-auto">
-            <div className="bg-podcast-primary rounded-2xl p-8">
-              <div className="text-center mb-6">
-                <h4 className="text-2xl font-bold text-podcast-gold mb-2">Studio Walkthrough</h4>
-                <p className="text-podcast-accent">Take a virtual tour of our professional recording space</p>
-              </div>
-              <div className="relative rounded-xl overflow-hidden">
-                <video 
-                  controls 
-                  className="w-full h-auto"
-                  poster="/images/studiopic1.png"
-                >
-                  <source src="/images/studiovideo.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+            <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl rounded-3xl p-12 border border-purple-500/30 text-center group hover:border-purple-400/50 transition-all duration-500">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative z-10">
+                <h3 className="text-4xl font-black text-white mb-6">STUDIO RENTAL</h3>
+                <div className="text-7xl font-black text-transparent bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text mb-4">$75<span className="text-3xl font-normal text-gray-300">/hour</span></div>
+                <div className="text-xl text-purple-300 mb-8 font-semibold">2-hour minimum booking</div>
+                
+                <div className="grid md:grid-cols-2 gap-6 mb-8">
+                  <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-6 border border-purple-500/30">
+                    <h4 className="font-bold text-white mb-4 text-lg">PERFECT FOR:</h4>
+                    <ul className="text-left space-y-3 text-gray-300">
+                      <li className="flex items-center space-x-2"><span className="text-purple-400">•</span><span>Podcast recordings</span></li>
+                      <li className="flex items-center space-x-2"><span className="text-cyan-400">•</span><span>Video content creation</span></li>
+                      <li className="flex items-center space-x-2"><span className="text-pink-400">•</span><span>Professional meetings</span></li>
+                      <li className="flex items-center space-x-2"><span className="text-green-400">•</span><span>Intimate events</span></li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl p-6 border border-cyan-500/30">
+                    <h4 className="font-bold text-white mb-4 text-lg">INCLUDES:</h4>
+                    <ul className="text-left space-y-3 text-gray-300">
+                      <li className="flex items-center space-x-2"><span className="text-purple-400">•</span><span>Up to 15 guests</span></li>
+                      <li className="flex items-center space-x-2"><span className="text-cyan-400">•</span><span>Professional equipment</span></li>
+                      <li className="flex items-center space-x-2"><span className="text-pink-400">•</span><span>High-speed WiFi</span></li>
+                      <li className="flex items-center space-x-2"><span className="text-green-400">•</span><span>On-site support</span></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="https://www.peerspace.com/pages/listings/686424eddba671f73a7afbc9"
+                    target="_blank"
+                    className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl"
+                  >
+                    🎙️ BOOK ON PEERSPACE ↗
+                  </a>
+                  <a
+                    href="tel:4012179799"
+                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700 text-white font-semibold rounded-2xl transition-all duration-300 border border-gray-600 hover:border-gray-500"
+                  >
+                    📞 CALL (401) 217-9799
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          
-          <div className="text-center mt-12">
-            <p className="text-podcast-accent text-lg mb-4">Ready to experience our professional studio?</p>
-            <a 
-              href="#booking" 
-              className="inline-flex items-center px-8 py-4 bg-podcast-red text-white font-bold rounded-full hover:bg-podcast-red/90 hover:scale-105 transition-all duration-300 group text-lg"
-            >
-              Book Your Session Now
-              <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing/Booking Section */}
-      <section className="py-24 bg-studio-light" id="booking">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-20 animate-fade-in">
-            <h2 className="text-5xl md:text-6xl font-bold text-studio-primary mb-6">Studio Packages</h2>
-            <h3 className="text-2xl md:text-3xl text-studio-gray font-light mb-8">Choose Your Creative Experience</h3>
-            <div className="w-24 h-1 bg-gradient-to-r from-studio-accent to-studio-orange mx-auto rounded-full"></div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {packages.map((pkg, index) => (
-              <div key={index} className={`group relative rounded-3xl p-8 transition-all duration-500 hover:-translate-y-4 ${pkg.popular ? 'bg-gradient-to-br from-studio-accent to-studio-purple shadow-modern scale-105 border-2 border-studio-light' : 'bg-white shadow-card hover:shadow-modern border border-studio-light/20'}`}>
-                {pkg.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-studio-orange to-studio-accent text-white px-6 py-2 rounded-full text-sm font-bold shadow-card">MOST POPULAR</span>
-                  </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h4 className={`text-2xl font-bold mb-4 ${pkg.popular ? 'text-white' : 'text-studio-primary'}`}>{pkg.title}</h4>
-                  <div className={`text-5xl font-bold ${pkg.popular ? 'text-white' : 'text-studio-primary'}`}>{pkg.price}</div>
-                  <div className={`text-sm mt-2 ${pkg.popular ? 'text-white/80' : 'text-studio-gray'}`}>per hour</div>
-                </div>
-                
-                <ul className="space-y-4 mb-8">
-                  {pkg.features.map((feature, idx) => (
-                    <li key={idx} className={`flex items-center ${pkg.popular ? 'text-white' : 'text-studio-gray'}`}>
-                      <div className={`w-5 h-5 mr-4 rounded-full flex items-center justify-center ${pkg.popular ? 'bg-white/20' : 'bg-studio-accent/10'}`}>
-                        <svg className={`w-3 h-3 ${pkg.popular ? 'text-white' : 'text-studio-accent'}`} fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                      <span className="font-medium">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <button className={`w-full py-4 rounded-2xl font-bold transition-all duration-300 group-hover:scale-105 ${pkg.popular ? 'bg-white text-studio-accent hover:bg-studio-light shadow-card' : 'bg-gradient-to-r from-studio-accent to-studio-purple text-white hover:from-studio-purple hover:to-studio-accent shadow-card'}`}>
-                  Book This Package
-                </button>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <p className="text-podcast-accent text-lg mb-4">Ready to get started?</p>
-            <a 
-                             href="mailto:trashcanrecords514@gmail.com" 
-              className="inline-flex items-center px-8 py-4 bg-podcast-gold text-podcast-primary font-bold rounded-full hover:bg-podcast-gold/90 hover:scale-105 transition-all duration-300"
-            >
-              Contact Us Today
-            </a>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 bg-gradient-to-br from-studio-light to-white" id="contact">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-20 animate-fade-in">
-            <h2 className="text-5xl md:text-6xl font-bold text-studio-primary mb-6">Get In Touch</h2>
-            <h3 className="text-2xl md:text-3xl text-studio-gray font-light mb-8">Ready to Book Your Creative Space?</h3>
-            <div className="w-24 h-1 bg-gradient-to-r from-studio-accent to-studio-orange mx-auto rounded-full"></div>
-          </div>
-          
-          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Contact Info */}
-            <div className="space-y-8">
-              <div className="bg-white rounded-3xl p-8 shadow-card">
-                <h4 className="text-2xl font-bold text-studio-primary mb-6">Studio Location</h4>
-                <div className="space-y-4 text-studio-gray">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-10 h-10 bg-gradient-to-r from-studio-accent to-studio-purple rounded-2xl flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-white text-lg">📍</span>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-studio-primary">Providence Creative Studio</p>
-                      <p>CIC Building</p>
-                      <p>Providence Innovation District, RI</p>
-                    </div>
+      <section id="booking" className="py-20 bg-gradient-to-b from-gray-900 to-black text-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-5xl font-black text-transparent bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text mb-6">GET IN TOUCH</h2>
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                Ready to book your session? Contact us directly or book through <span className="text-purple-400 font-semibold">Peerspace</span>.
+              </p>
+
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4 p-4 rounded-2xl bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300">
+                  <div className="w-14 h-14 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center">
+                    <span className="text-white text-2xl">📞</span>
                   </div>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-10 h-10 bg-gradient-to-r from-studio-green to-studio-accent rounded-2xl flex items-center justify-center">
-                      <span className="text-white text-lg">📞</span>
-                    </div>
-                    <a href="tel:4012179799" className="text-studio-primary font-semibold hover:text-studio-accent transition-colors duration-300">(401) 217-9799</a>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-10 h-10 bg-gradient-to-r from-studio-orange to-studio-purple rounded-2xl flex items-center justify-center">
-                      <span className="text-white text-lg">📧</span>
-                    </div>
-                    <a href="mailto:trashcanrecords514@gmail.com" className="text-studio-primary font-semibold hover:text-studio-accent transition-colors duration-300 break-all">trashcanrecords514@gmail.com</a>
+                  <div>
+                    <h3 className="font-bold text-white text-lg">Phone</h3>
+                    <p className="text-gray-300 text-lg">(401) 217-9799</p>
                   </div>
                 </div>
-              </div>
-              
-              <div className="bg-white rounded-3xl p-8 shadow-card">
-                <h4 className="text-2xl font-bold text-studio-primary mb-6">Studio Hours</h4>
-                <div className="space-y-3 text-studio-gray">
-                  <div className="flex justify-between">
-                    <span className="font-medium">Monday - Friday</span>
-                    <span>9:00 AM - 9:00 PM</span>
+
+                <div className="flex items-center space-x-4 p-4 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300">
+                  <div className="w-14 h-14 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl flex items-center justify-center">
+                    <span className="text-white text-2xl">📧</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="font-medium">Saturday</span>
-                    <span>10:00 AM - 6:00 PM</span>
+                  <div>
+                    <h3 className="font-bold text-white text-lg">Email</h3>
+                    <p className="text-gray-300 text-lg break-all">trashcanrecords514@gmail.com</p>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="font-medium">Sunday</span>
-                    <span>12:00 PM - 6:00 PM</span>
+                </div>
+
+                <div className="flex items-center space-x-4 p-4 rounded-2xl bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 hover:border-green-400/50 transition-all duration-300">
+                  <div className="w-14 h-14 bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center">
+                    <span className="text-white text-2xl">📍</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-lg">Location</h3>
+                    <p className="text-gray-300 text-lg leading-relaxed">CIC Building<br />Providence Innovation District, RI</p>
                   </div>
                 </div>
               </div>
             </div>
-            
-            {/* Quick Contact Form */}
-            <div className="bg-white rounded-3xl p-8 shadow-modern border border-studio-light/20">
-              <h4 className="text-2xl font-bold text-studio-primary mb-8">Quick Booking Inquiry</h4>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <input 
-                    type="text" 
-                    placeholder="Your Name" 
-                    className="w-full p-4 border border-studio-light/30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-studio-accent focus:border-transparent transition-all duration-300"
-                  />
-                  <input 
-                    type="email" 
-                    placeholder="Email Address" 
-                    className="w-full p-4 border border-studio-light/30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-studio-accent focus:border-transparent transition-all duration-300"
-                  />
-                </div>
-                <input 
-                  type="tel" 
-                  placeholder="Phone Number" 
-                  className="w-full p-4 border border-studio-light/30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-studio-accent focus:border-transparent transition-all duration-300"
-                />
-                <select className="w-full p-4 border border-studio-light/30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-studio-accent focus:border-transparent transition-all duration-300 bg-white">
-                  <option>Select Package</option>
-                  <option>Content Creation ($75/hr)</option>
-                  <option>Media Production ($75/hr)</option>
-                  <option>Events & Meetings ($75/hr)</option>
-                </select>
-                <textarea 
-                  placeholder="Tell us about your media project or event..." 
-                  rows={4}
-                  className="w-full p-4 border border-studio-light/30 rounded-2xl focus:outline-none focus:ring-2 focus:ring-studio-accent focus:border-transparent transition-all duration-300 resize-none"
-                ></textarea>
-                <button 
-                  type="submit" 
-                  className="w-full bg-gradient-to-r from-studio-accent to-studio-purple text-white py-4 rounded-2xl font-bold hover:from-studio-purple hover:to-studio-accent transform hover:scale-105 transition-all duration-300 shadow-card"
-                >
-                  Send Inquiry
-                </button>
-              </form>
+
+            <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all duration-500">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-3xl opacity-50"></div>
+              <div className="relative z-10">
+                <h3 className="text-3xl font-black text-white mb-6">QUICK CONTACT</h3>
+                <form className="space-y-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-bold text-white mb-2 uppercase tracking-wider">Name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      className="w-full px-4 py-3 bg-black/50 border border-purple-500/30 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-400 transition-all duration-300"
+                      placeholder="Your name"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-bold text-white mb-2 uppercase tracking-wider">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      className="w-full px-4 py-3 bg-black/50 border border-purple-500/30 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-400 transition-all duration-300"
+                      placeholder="your@email.com"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-bold text-white mb-2 uppercase tracking-wider">Message</label>
+                    <textarea
+                      id="message"
+                      rows={4}
+                      className="w-full px-4 py-3 bg-black/50 border border-purple-500/30 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-400 transition-all duration-300 resize-none"
+                      placeholder="Tell us about your podcast project..."
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    className="w-full px-6 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-2xl text-lg"
+                  >
+                    🚀 SEND MESSAGE
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
