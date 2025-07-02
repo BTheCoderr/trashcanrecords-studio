@@ -393,11 +393,73 @@ export default function Home() {
       {/* Contact Section */}
       <section id="booking" className="py-20 bg-gradient-to-b from-gray-900 to-black text-white">
         <div className="max-w-7xl mx-auto px-6">
+          {/* Calendar Booking Section */}
+          <div className="mb-16">
+            <div className="relative bg-gradient-to-br from-cyan-800/50 to-blue-900/50 backdrop-blur-xl rounded-3xl p-8 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-500">
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-3xl opacity-50"></div>
+              <div className="relative z-10 text-center">
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 mb-4 backdrop-blur-sm">
+                  <span className="text-sm font-medium text-cyan-200">⚡ Instant Booking</span>
+                </div>
+                <h3 className="text-4xl font-black text-white mb-4">BOOK DIRECTLY</h3>
+                <p className="text-cyan-200 mb-6 text-lg">See real-time availability and book your session instantly</p>
+                
+                <div className="grid lg:grid-cols-2 gap-8 items-center">
+                  {/* Calendar Placeholder */}
+                  <div className="bg-white rounded-2xl overflow-hidden shadow-2xl">
+                    <div className="h-80 flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
+                      <div className="text-center text-gray-600">
+                        <div className="text-6xl mb-4">📅</div>
+                        <div className="text-xl font-bold mb-2">Calendar Integration Ready</div>
+                        <div className="text-sm max-w-xs mx-auto">
+                          Replace this section with your Calendly embed code
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Benefits */}
+                  <div className="space-y-6">
+                    <h4 className="text-2xl font-bold text-white">Why Book Directly?</h4>
+                    <div className="grid grid-cols-1 gap-4">
+                      <div className="flex items-center space-x-3">
+                        <span className="text-green-400 text-xl">✓</span>
+                        <span className="text-cyan-200">Real-time availability</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <span className="text-green-400 text-xl">✓</span>
+                        <span className="text-cyan-200">Instant confirmation</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <span className="text-green-400 text-xl">✓</span>
+                        <span className="text-cyan-200">Automatic reminders</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <span className="text-green-400 text-xl">✓</span>
+                        <span className="text-cyan-200">Calendar sync</span>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <span className="text-green-400 text-xl">✓</span>
+                        <span className="text-cyan-200">No back-and-forth emails</span>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl p-4 border border-cyan-500/30">
+                      <p className="text-cyan-100 text-sm">
+                        <strong>Pro Tip:</strong> Book through the calendar for fastest confirmation, or use the contact form below for custom requests and questions.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-5xl font-black text-transparent bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text mb-6">GET IN TOUCH</h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Ready to book your session? Contact us directly or book through <span className="text-purple-400 font-semibold">Peerspace</span>.
+                Have questions or special requirements? Contact us directly or book through <span className="text-purple-400 font-semibold">Peerspace</span>.
               </p>
 
               <div className="space-y-6">
