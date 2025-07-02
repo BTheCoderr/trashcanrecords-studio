@@ -204,31 +204,37 @@ export default function Home() {
             <p className="text-xl text-gray-300">Take a look inside our professional creative space</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* FEATURED: Conference Room Setup - Now First */}
-            <div className="relative group overflow-hidden rounded-3xl border border-purple-500/20 hover:border-purple-400/40 transition-all duration-500 lg:col-span-2">
+          {/* HERO IMAGE: Main Conference Room */}
+          <div className="mb-12">
+            <div className="relative group overflow-hidden rounded-3xl border-2 border-purple-500/30 hover:border-purple-400/60 transition-all duration-500 shadow-2xl shadow-purple-500/20">
               <Image
-                src="/images/studiopic2.jpg"
+                src="/images/studiopic3.jpg"
                 alt="Professional conference room setup with podcast recording equipment and seating for up to 15 guests"
-                width={800}
-                height={400}
-                className="w-full h-80 object-contain bg-gray-800 transition-transform group-hover:scale-105"
+                width={1200}
+                height={600}
+                className="w-full h-96 object-cover transition-transform group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-purple-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
-                <p className="text-white font-bold text-xl bg-purple-600/80 px-4 py-2 rounded-xl backdrop-blur-sm">🎙️ MAIN CONFERENCE ROOM</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-purple-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-8">
+                <div className="text-center">
+                  <p className="text-white font-black text-3xl bg-purple-600/90 px-6 py-3 rounded-2xl backdrop-blur-sm mb-2">🎙️ MAIN CONFERENCE ROOM</p>
+                  <p className="text-purple-200 text-lg">Professional podcast recording space for up to 15 guests</p>
+                </div>
               </div>
             </div>
+          </div>
 
+          {/* Additional Studio Views */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="relative group overflow-hidden rounded-3xl border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-500">
               <Image
                 src="/images/studiopic1.png"
                 alt="Professional podcast setup with microphones and acoustic treatment"
                 width={400}
                 height={300}
-                className="w-full h-80 object-contain bg-gray-800 transition-transform group-hover:scale-105"
+                className="w-full h-64 object-cover transition-transform group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
-                <p className="text-white font-bold bg-cyan-600/80 px-4 py-2 rounded-xl backdrop-blur-sm">Professional Setup</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-4">
+                <p className="text-white font-bold bg-cyan-600/80 px-3 py-2 rounded-xl backdrop-blur-sm text-sm">Professional Setup</p>
               </div>
             </div>
 
@@ -238,23 +244,23 @@ export default function Home() {
                 alt="Modern studio environment with professional recording capabilities"
                 width={400}
                 height={300}
-                className="w-full h-80 object-contain bg-gray-800 transition-transform group-hover:scale-105"
+                className="w-full h-64 object-cover transition-transform group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-pink-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
-                <p className="text-white font-bold bg-pink-600/80 px-4 py-2 rounded-xl backdrop-blur-sm">Modern Environment</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-pink-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-4">
+                <p className="text-white font-bold bg-pink-600/80 px-3 py-2 rounded-xl backdrop-blur-sm text-sm">Modern Environment</p>
               </div>
             </div>
 
             <div className="relative group overflow-hidden rounded-3xl border border-green-500/20 hover:border-green-400/40 transition-all duration-500">
               <Image
-                src="/images/studiopic3.jpg"
+                src="/images/studiopic2.jpg"
                 alt="Creative workspace with modern lighting and comfortable seating"
                 width={400}
                 height={300}
-                className="w-full h-80 object-contain bg-gray-800 transition-transform group-hover:scale-105"
+                className="w-full h-64 object-cover transition-transform group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-green-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
-                <p className="text-white font-bold bg-green-600/80 px-4 py-2 rounded-xl backdrop-blur-sm">Creative Space</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-green-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-4">
+                <p className="text-white font-bold bg-green-600/80 px-3 py-2 rounded-xl backdrop-blur-sm text-sm">Creative Space</p>
               </div>
             </div>
 
@@ -264,24 +270,27 @@ export default function Home() {
                 alt="Flexible studio space ready for various types of content creation"
                 width={400}
                 height={300}
-                className="w-full h-80 object-contain bg-gray-800 transition-transform group-hover:scale-105"
+                className="w-full h-64 object-cover transition-transform group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-yellow-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
-                <p className="text-white font-bold bg-yellow-600/80 px-4 py-2 rounded-xl backdrop-blur-sm">Flexible Setup</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-yellow-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-4">
+                <p className="text-white font-bold bg-yellow-600/80 px-3 py-2 rounded-xl backdrop-blur-sm text-sm">Flexible Setup</p>
               </div>
             </div>
+          </div>
 
-            <div className="relative group overflow-hidden rounded-3xl border border-indigo-500/20 hover:border-indigo-400/40 transition-all duration-500">
+          {/* Studio Tour Video */}
+          <div className="mt-12">
+            <div className="relative group overflow-hidden rounded-3xl border border-indigo-500/20 hover:border-indigo-400/40 transition-all duration-500 max-w-2xl mx-auto">
               <video
-                className="w-full h-80 object-contain bg-gray-800"
+                className="w-full h-80 object-cover"
                 controls
                 poster="/images/studiopic2.jpg"
               >
                 <source src="/images/studiovideo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <div className="absolute top-4 left-4 bg-indigo-600/80 px-3 py-1 rounded-xl backdrop-blur-sm">
-                <p className="text-white font-bold text-sm">🎬 STUDIO TOUR</p>
+              <div className="absolute top-4 left-4 bg-indigo-600/90 px-4 py-2 rounded-xl backdrop-blur-sm">
+                <p className="text-white font-bold">🎬 STUDIO TOUR</p>
               </div>
             </div>
           </div>
@@ -394,12 +403,27 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-3xl opacity-50"></div>
               <div className="relative z-10">
                 <h3 className="text-3xl font-black text-white mb-6">QUICK CONTACT</h3>
-                <form className="space-y-6">
+                <form 
+                  name="contact" 
+                  method="POST" 
+                  data-netlify="true" 
+                  data-netlify-honeypot="bot-field"
+                  className="space-y-6"
+                >
+                  {/* Hidden input for Netlify */}
+                  <input type="hidden" name="form-name" value="contact" />
+                  {/* Honeypot field for spam protection */}
+                  <div style={{ display: 'none' }}>
+                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                  </div>
+                  
                   <div>
                     <label htmlFor="name" className="block text-sm font-bold text-white mb-2 uppercase tracking-wider">Name</label>
                     <input
                       type="text"
                       id="name"
+                      name="name"
+                      required
                       className="w-full px-4 py-3 bg-black/50 border border-purple-500/30 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-400 transition-all duration-300"
                       placeholder="Your name"
                     />
@@ -409,17 +433,40 @@ export default function Home() {
                     <input
                       type="email"
                       id="email"
+                      name="email"
+                      required
                       className="w-full px-4 py-3 bg-black/50 border border-purple-500/30 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-400 transition-all duration-300"
                       placeholder="your@email.com"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-bold text-white mb-2 uppercase tracking-wider">Phone (Optional)</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      className="w-full px-4 py-3 bg-black/50 border border-purple-500/30 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-400 transition-all duration-300"
+                      placeholder="(401) 123-4567"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="booking-date" className="block text-sm font-bold text-white mb-2 uppercase tracking-wider">Preferred Date</label>
+                    <input
+                      type="date"
+                      id="booking-date"
+                      name="booking-date"
+                      className="w-full px-4 py-3 bg-black/50 border border-purple-500/30 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-400 transition-all duration-300"
                     />
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-bold text-white mb-2 uppercase tracking-wider">Message</label>
                     <textarea
                       id="message"
+                      name="message"
                       rows={4}
+                      required
                       className="w-full px-4 py-3 bg-black/50 border border-purple-500/30 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-400 transition-all duration-300 resize-none"
-                      placeholder="Tell us about your podcast project..."
+                      placeholder="Tell us about your podcast project, duration needed, number of guests, etc..."
                     ></textarea>
                   </div>
                   <button

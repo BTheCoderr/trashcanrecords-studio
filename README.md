@@ -123,10 +123,49 @@ The website features professional photos of our studio setup:
 - **Location**: CIC Building, Providence Innovation District, RI
 - **Book Online**: [Peerspace Listing](https://www.peerspace.com/pages/listings/686424eddba671f73a7afbc9)
 
+## 📧 Netlify Forms Setup
+
+This project includes a fully configured contact form that works with Netlify Forms:
+
+### Features
+- ✅ **Spam Protection** - Honeypot field to prevent bot submissions
+- ✅ **Form Validation** - Required fields with proper validation
+- ✅ **Thank You Page** - Custom redirect after submission
+- ✅ **Mobile Optimized** - Responsive form design
+
+### Email Notifications Setup
+
+After deploying to Netlify:
+
+1. **Go to your Netlify dashboard** → Site Settings → Forms
+2. **Enable form notifications** for the "contact" form
+3. **Add email notifications**:
+   - Go to Forms → Form notifications
+   - Click "Add notification" → "Email notification"
+   - Enter your email address
+   - Choose "New form submission" trigger
+
+### Form Fields Included
+- **Name** (required)
+- **Email** (required) 
+- **Phone** (optional)
+- **Preferred Date** (for booking)
+- **Message** (required)
+
+### Testing the Form
+After deployment, test the form by:
+1. Filling out the contact form on your live site
+2. Checking that you receive the email notification
+3. Verifying the thank you page displays correctly
+
 ## 🚀 Deployment
 
-This project is optimized for deployment on Vercel:
+This project is optimized for deployment on **Netlify** (recommended for forms) or Vercel:
 
+### Netlify Deployment (Recommended)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/BTheCoderr/trashcanrecords-studio)
+
+### Vercel Deployment  
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/BTheCoderr/trashcanrecords-studio)
 
 ## 🤝 Contributing
