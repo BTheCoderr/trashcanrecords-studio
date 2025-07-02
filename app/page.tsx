@@ -27,6 +27,9 @@ export default function Home() {
           email: formData.get('email'),
           phone: formData.get('phone'),
           'booking-date': formData.get('booking-date'),
+          'booking-time': formData.get('booking-time'),
+          'session-duration': formData.get('session-duration'),
+          'guest-count': formData.get('guest-count'),
           message: formData.get('message')
         });
       }, 1000);
@@ -491,6 +494,49 @@ export default function Home() {
                       className="w-full px-4 py-3 bg-black/50 border border-purple-500/30 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-400 transition-all duration-300"
                     />
                   </div>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="booking-time" className="block text-sm font-bold text-white mb-2 uppercase tracking-wider">Preferred Time</label>
+                      <input
+                        type="time"
+                        id="booking-time"
+                        name="booking-time"
+                        className="w-full px-4 py-3 bg-black/50 border border-purple-500/30 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-400 transition-all duration-300"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="session-duration" className="block text-sm font-bold text-white mb-2 uppercase tracking-wider">Session Length</label>
+                      <select
+                        id="session-duration"
+                        name="session-duration"
+                        className="w-full px-4 py-3 bg-black/50 border border-purple-500/30 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-400 transition-all duration-300"
+                      >
+                        <option value="">Select duration...</option>
+                        <option value="2-hours">2 Hours (Minimum - $150)</option>
+                        <option value="3-hours">3 Hours ($225)</option>
+                        <option value="4-hours">4 Hours ($300)</option>
+                        <option value="5-hours">5 Hours ($375)</option>
+                        <option value="6-hours">6 Hours ($450)</option>
+                        <option value="full-day">Full Day (8+ Hours)</option>
+                        <option value="custom">Custom Duration</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label htmlFor="guest-count" className="block text-sm font-bold text-white mb-2 uppercase tracking-wider">Number of Guests</label>
+                    <select
+                      id="guest-count"
+                      name="guest-count"
+                      className="w-full px-4 py-3 bg-black/50 border border-purple-500/30 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-400 transition-all duration-300"
+                    >
+                      <option value="">How many people?</option>
+                      <option value="1">1 Person (Solo)</option>
+                      <option value="2">2 People (Interview/Duo)</option>
+                      <option value="3-5">3-5 People (Small Group)</option>
+                      <option value="6-10">6-10 People (Medium Group)</option>
+                      <option value="11-15">11-15 People (Large Group)</option>
+                    </select>
+                  </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-bold text-white mb-2 uppercase tracking-wider">Message</label>
                     <textarea
@@ -499,7 +545,7 @@ export default function Home() {
                       rows={4}
                       required
                       className="w-full px-4 py-3 bg-black/50 border border-purple-500/30 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-400 transition-all duration-300 resize-none"
-                      placeholder="Tell us about your podcast project, duration needed, number of guests, etc..."
+                      placeholder="Tell us about your podcast project, any special requirements, equipment needs, etc..."
                     ></textarea>
                   </div>
                   <button
