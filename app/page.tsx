@@ -115,10 +115,13 @@ export default function Home() {
               PROFESSIONAL PODCAST STUDIO
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Located in Providence&#39;s Innovation District within the CIC building, <span className="text-purple-400 font-semibold">Trashcan Records Studio</span> 
-              provides a professional podcast recording space perfect for content creators, interviews, 
-              and media productions.
+              Located in Providence&#39;s Innovation District within the CIC building, <span className="text-purple-400 font-semibold">Trashcan Records Studio</span> provides a professional podcast recording space perfect for content creators, interviews, and media productions.
             </p>
+            <div className="mt-8 bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-6 border border-gray-700/50 max-w-4xl mx-auto">
+              <p className="text-gray-300 text-center">
+                <span className="text-cyan-400 font-semibold">Space & Equipment Rental Only</span> — We provide the professional studio space and recording equipment. You bring your creativity, content, and any personal devices you need.
+              </p>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -155,7 +158,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
           </div>
-        </div>
+             </div>
       </section>
 
       {/* Features Section */}
@@ -163,9 +166,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-black text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text mb-6">STUDIO FEATURES</h2>
-            <p className="text-xl text-gray-300">Everything You Need for Professional Podcast Production</p>
+            <p className="text-xl text-gray-300">Professional Space & Equipment for Content Creation</p>
+            <div className="mt-6 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-xl p-4 border border-red-500/30 max-w-3xl mx-auto">
+              <p className="text-orange-200 text-lg">
+                <span className="font-bold">📋 Important:</span> We provide the studio space and recording equipment. Bring your own laptop, recording software, and content expertise.
+              </p>
+            </div>
           </div>
-
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="group flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:transform hover:scale-105">
               <div className="text-4xl group-hover:animate-bounce">📶</div>
@@ -185,7 +193,7 @@ export default function Home() {
                   Tables and chairs available upon request to configure the space exactly for your event or production.
                 </p>
               </div>
-            </div>
+                </div>
 
             <div className="group flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-pink-500/20 hover:border-pink-400/40 transition-all duration-300 hover:transform hover:scale-105">
               <div className="text-4xl group-hover:animate-bounce">✨</div>
@@ -195,8 +203,8 @@ export default function Home() {
                   Professionally cleaned twice daily (morning and evening) with sanitizer and disinfecting supplies provided.
                 </p>
               </div>
-            </div>
-
+              </div>
+              
             <div className="group flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-green-500/20 hover:border-green-400/40 transition-all duration-300 hover:transform hover:scale-105">
               <div className="text-4xl group-hover:animate-bounce">🤫</div>
               <div>
@@ -205,7 +213,7 @@ export default function Home() {
                   Ideal environment for podcasts, recordings, meetings, and focused creative work.
                 </p>
               </div>
-            </div>
+                </div>
 
             <div className="group flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-yellow-500/20 hover:border-yellow-400/40 transition-all duration-300 hover:transform hover:scale-105">
               <div className="text-4xl group-hover:animate-bounce">🏢</div>
@@ -215,8 +223,8 @@ export default function Home() {
                   Centrally located in Providence Innovation District with elevator access and on-site host assistance.
                 </p>
               </div>
-            </div>
-
+              </div>
+              
             <div className="group flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-indigo-500/20 hover:border-indigo-400/40 transition-all duration-300 hover:transform hover:scale-105">
               <div className="text-4xl group-hover:animate-bounce">👥</div>
               <div>
@@ -311,7 +319,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-
+          
           {/* Studio Tour Video */}
           <div className="mt-12">
             <div className="relative group overflow-hidden rounded-3xl border border-indigo-500/20 hover:border-indigo-400/40 transition-all duration-500 max-w-2xl mx-auto">
@@ -338,7 +346,7 @@ export default function Home() {
             <h2 className="text-5xl font-black text-transparent bg-gradient-to-r from-green-400 via-emerald-400 to-cyan-400 bg-clip-text mb-6">STUDIO RENTAL</h2>
             <p className="text-xl text-gray-300">Simple, Transparent Pricing</p>
           </div>
-
+          
           <div className="max-w-4xl mx-auto">
             <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl rounded-3xl p-12 border border-purple-500/30 text-center group hover:border-purple-400/50 transition-all duration-500">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -359,16 +367,22 @@ export default function Home() {
                   </div>
                   
                   <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl p-6 border border-cyan-500/30">
-                    <h4 className="font-bold text-white mb-4 text-lg">INCLUDES:</h4>
+                    <h4 className="font-bold text-white mb-4 text-lg">WHAT&#39;S INCLUDED:</h4>
                     <ul className="text-left space-y-3 text-gray-300">
-                      <li className="flex items-center space-x-2"><span className="text-purple-400">•</span><span>Up to 15 guests</span></li>
-                      <li className="flex items-center space-x-2"><span className="text-cyan-400">•</span><span>Professional equipment</span></li>
+                      <li className="flex items-center space-x-2"><span className="text-purple-400">•</span><span>Professional recording space (up to 15 guests)</span></li>
+                      <li className="flex items-center space-x-2"><span className="text-cyan-400">•</span><span>Microphones & audio equipment</span></li>
                       <li className="flex items-center space-x-2"><span className="text-pink-400">•</span><span>High-speed WiFi</span></li>
-                      <li className="flex items-center space-x-2"><span className="text-green-400">•</span><span>On-site support</span></li>
+                      <li className="flex items-center space-x-2"><span className="text-green-400">•</span><span>On-site host support</span></li>
+                      <li className="flex items-center space-x-2"><span className="text-yellow-400">•</span><span>Flexible furniture setup</span></li>
                     </ul>
+                    <div className="mt-4 pt-4 border-t border-cyan-500/20">
+                      <p className="text-cyan-200 text-sm">
+                        <span className="font-semibold">Note:</span> Laptops, recording software, and audio engineers are not provided. Space & equipment rental only.
+                      </p>
+                    </div>
                   </div>
                 </div>
-
+                
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
                     href="https://www.peerspace.com/pages/listings/686424eddba671f73a7afbc9"
@@ -385,7 +399,7 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-            </div>
+          </div>
           </div>
         </div>
       </section>
@@ -442,8 +456,8 @@ export default function Home() {
                         <span className="text-green-400 text-xl">✓</span>
                         <span className="text-cyan-200">No back-and-forth emails</span>
                       </div>
-                    </div>
-                    
+          </div>
+          
                     <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl p-4 border border-cyan-500/30">
                       <p className="text-cyan-100 text-sm">
                         <strong>Pro Tip:</strong> Book through the calendar for fastest confirmation, or use the contact form below for custom requests and questions.
@@ -480,21 +494,21 @@ export default function Home() {
                   <div>
                     <h3 className="font-bold text-white text-lg">Email</h3>
                     <p className="text-gray-300 text-lg break-all">trashcanrecords514@gmail.com</p>
-                  </div>
                 </div>
-
+              </div>
+              
                 <div className="flex items-center space-x-4 p-4 rounded-2xl bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 hover:border-green-400/50 transition-all duration-300">
                   <div className="w-14 h-14 bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center">
                     <span className="text-white text-2xl">📍</span>
                   </div>
-                  <div>
+              <div>
                     <h3 className="font-bold text-white text-lg">Location</h3>
                     <p className="text-gray-300 text-lg leading-relaxed">CIC Building<br />Providence Innovation District, RI</p>
                   </div>
                 </div>
               </div>
             </div>
-
+            
             <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all duration-500">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-3xl opacity-50"></div>
               <div className="relative z-10">
@@ -517,8 +531,8 @@ export default function Home() {
                   
                   <div>
                     <label htmlFor="name" className="block text-sm font-bold text-white mb-2 uppercase tracking-wider">Name</label>
-                    <input
-                      type="text"
+                <input 
+                  type="text" 
                       id="name"
                       name="name"
                       required
@@ -528,8 +542,8 @@ export default function Home() {
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-bold text-white mb-2 uppercase tracking-wider">Email</label>
-                    <input
-                      type="email"
+                <input 
+                  type="email" 
                       id="email"
                       name="email"
                       required
@@ -539,8 +553,8 @@ export default function Home() {
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-bold text-white mb-2 uppercase tracking-wider">Phone (Optional)</label>
-                    <input
-                      type="tel"
+                <input 
+                  type="tel" 
                       id="phone"
                       name="phone"
                       className="w-full px-4 py-3 bg-black/50 border border-purple-500/30 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-400 transition-all duration-300"
@@ -597,21 +611,21 @@ export default function Home() {
                       <option value="3-5">3-5 People (Small Group)</option>
                       <option value="6-10">6-10 People (Medium Group)</option>
                       <option value="11-15">11-15 People (Large Group)</option>
-                    </select>
+                </select>
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-bold text-white mb-2 uppercase tracking-wider">Message</label>
-                    <textarea
+                <textarea 
                       id="message"
                       name="message"
-                      rows={4}
+                  rows={4}
                       required
                       className="w-full px-4 py-3 bg-black/50 border border-purple-500/30 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-400 transition-all duration-300 resize-none"
                       placeholder="Tell us about your podcast project, any special requirements, equipment needs, etc..."
-                    ></textarea>
+                ></textarea>
                   </div>
-                  <button
-                    type="submit"
+                <button 
+                  type="submit" 
                     disabled={isSubmitting}
                     className={`w-full px-6 py-4 text-white font-bold rounded-2xl transition-all duration-300 shadow-2xl text-lg ${
                       isSubmitting 
@@ -620,8 +634,8 @@ export default function Home() {
                     }`}
                   >
                     {isSubmitting ? '⏳ SENDING...' : '🚀 SEND MESSAGE'}
-                  </button>
-                </form>
+                </button>
+              </form>
               </div>
             </div>
           </div>
