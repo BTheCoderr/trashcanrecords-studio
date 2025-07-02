@@ -446,7 +446,7 @@ export default function Home() {
                   <input type="hidden" name="form-name" value="contact" />
                   {/* Honeypot field for spam protection */}
                   <div style={{ display: 'none' }}>
-                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    <label>Don&#39;t fill this out if you&#39;re human: <input name="bot-field" /></label>
                   </div>
                   
                   <div>

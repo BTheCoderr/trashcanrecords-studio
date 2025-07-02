@@ -28,7 +28,7 @@ export default function ThankYou() {
           </h1>
           
           <p className="text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
-            Your message has been received! We'll get back to you within <span className="text-green-400 font-semibold">24 hours</span> to discuss your podcast project and studio booking.
+            Your message has been received! We&#39;ll get back to you within <span className="text-green-400 font-semibold">24 hours</span> to discuss your podcast project and studio booking.
           </p>
           
           <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl rounded-3xl p-8 border border-green-500/30 mb-12 max-w-2xl mx-auto">
@@ -36,7 +36,7 @@ export default function ThankYou() {
             <div className="text-left space-y-4 text-gray-300">
               <div className="flex items-start space-x-3">
                 <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">1</div>
-                <p>We'll review your message and preferred booking details</p>
+                <p>We&#39;ll review your message and preferred booking details</p>
               </div>
               <div className="flex items-start space-x-3">
                 <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white text-sm font-bold mt-1">2</div>
