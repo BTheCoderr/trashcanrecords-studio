@@ -7,75 +7,76 @@ import { Footer } from '../components/Footer';
 export default function Home() {
   const studioFeatures = [
     {
-      icon: '🎙️',
-      title: 'Professional Podcast Microphones',
-      description: 'High-quality podcast microphones like Shure SM7B with crystal-clear audio quality and zero background noise.',
+      icon: '📶',
+      title: 'High-Speed WiFi',
+      description: 'Reliable, fast internet connection perfect for streaming, video calls, and content creation needs.',
     },
     {
-      icon: '🎧',
-      title: 'Real-Time Audio Monitoring',
-      description: 'Professional headphones for hosts and guests with real-time audio monitoring for perfect podcast sound.',
+      icon: '🪑',
+      title: 'Flexible Furniture Setup',
+      description: 'Tables and chairs available upon request to configure the space exactly for your event or production.',
     },
     {
-      icon: '💻',
-      title: 'Podcast Recording Software',
-      description: 'Pre-installed podcast recording software with editing capabilities and easy export for your episodes.',
+      icon: '🧼',
+      title: 'Professional Cleaning',
+      description: 'Professionally cleaned twice daily (morning and evening) with sanitizer and disinfecting supplies provided.',
     },
     {
-      icon: '🔇',
-      title: 'Soundproof Podcast Room',
-      description: 'Acoustically treated space ensures professional podcast quality without outside interference or echo.',
+      icon: '🤫',
+      title: 'Quiet Professional Space',
+      description: 'Ideal environment for podcasts, recordings, meetings, and focused creative work.',
     },
     {
-      icon: '📺',
-      title: 'Video Podcast Capability',
-      description: 'Multi-camera video setup for video podcasts, YouTube content, and live streaming.',
+      icon: '🛗',
+      title: 'Easy Access',
+      description: 'Centrally located in Providence Innovation District with elevator access and on-site host assistance.',
     },
     {
-      icon: '☁️',
-      title: 'Cloud Storage & Export',
-      description: 'Automatic cloud backup and easy file sharing for seamless podcast post-production and distribution.',
+      icon: '👨‍💼',
+      title: 'On-Site Support',
+      description: 'Host available to greet you upon arrival and provide assistance throughout your session.',
     }
   ];
 
   const packages = [
     {
-      title: 'Solo Podcaster',
-      price: '$25/hour',
+      title: 'Content Creation',
+      price: '$75/hour',
       features: [
-        'Single podcast microphone setup',
-        'Podcast recording software',
-        'Audio monitoring headphones',
-        'Cloud storage & export',
-        'Technical setup assistance'
+        '4-hour minimum booking',
+        'High-speed WiFi included',
+        'Tables & chairs setup',
+        'Professional daily cleaning',
+        'On-site host assistance',
+        'Full restroom access'
       ],
       popular: false
     },
     {
-      title: 'Interview/Co-Host',
-      price: '$40/hour',
+      title: 'Media Production',
+      price: '$75/hour',
       features: [
-        'Two microphone setup',
-        'Advanced podcast software',
-        'Dual audio monitoring',
-        'Video podcast option',
-        'Cloud storage & export',
-        'Technical support',
-        'Basic editing assistance'
+        '4-hour minimum booking',
+        'Flexible space configuration',
+        'Quiet recording environment',
+        'Elevator access included',
+        'Professional cleaning',
+        'Host support throughout',
+        'Perfect for film/photo shoots'
       ],
       popular: true
     },
     {
-      title: 'Panel/Group Cast',
-      price: '$60/hour',
+      title: 'Events & Meetings',
+      price: '$75/hour',
       features: [
-        'Up to 4 podcast microphones',
-        'Professional podcast mixer',
-        'Multi-camera video setup',
-        'Live streaming capability',
-        'Dedicated audio engineer',
-        'Cloud storage & export',
-        'Full production support'
+        '4-hour minimum booking',
+        'Up to 250 guest capacity',
+        'Central Providence location',
+        'Tables & chairs provided',
+        'High-speed internet',
+        'Professional venue support',
+        'Ideal for networking events'
       ],
       popular: false
     }
@@ -104,7 +105,7 @@ export default function Home() {
             </div>
             
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-podcast-gold leading-none">
-              PODCAST
+              CREATIVE
               <br />
               <span className="text-podcast-accent">STUDIO</span>
             </h1>
@@ -112,9 +113,9 @@ export default function Home() {
             <div className="w-32 h-1 bg-gradient-to-r from-podcast-red to-podcast-gold mx-auto rounded-full"></div>
             
                          <p className="text-xl md:text-2xl text-podcast-gold font-light max-w-2xl mx-auto leading-relaxed">
-               Professional podcast studio where authentic voices meet crystal-clear sound in 
-               <span className="text-podcast-accent font-medium"> Providence, RI</span>. 
-               Where your story meets professional quality.
+               Professional media & event space in Providence's Innovation District. 
+               <span className="text-podcast-accent font-medium"> Perfect for podcasts, content creation & events</span>. 
+               Where creativity meets professional quality.
              </p>
             
             {/* Call to Action */}
@@ -128,7 +129,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </a>
-              <p className="text-podcast-accent text-sm">Starting at $25/hour • No setup fees</p>
+              <p className="text-podcast-accent text-sm">$75/hour • 4-hour minimum • Up to 250 guests</p>
             </div>
           </div>
         </div>
@@ -140,16 +141,16 @@ export default function Home() {
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-6">
               <span className="text-4xl">🏢</span>
-                             <h2 className="text-5xl font-bold text-podcast-primary">About Trashcan Records</h2>
+                             <h2 className="text-5xl font-bold text-podcast-primary">Providence Creative Studio</h2>
              </div>
-             <h3 className="text-3xl text-podcast-secondary font-medium mb-8">Underground Sound Meets Professional Excellence</h3>
+             <h3 className="text-3xl text-podcast-secondary font-medium mb-8">Professional Media & Event Space</h3>
             <div className="w-24 h-1 bg-gradient-to-r from-podcast-red to-podcast-gold mx-auto rounded-full"></div>
           </div>
           
           <div className="max-w-4xl mx-auto space-y-8">
                          <p className="text-xl text-gray-700 leading-relaxed text-center">
-               Located in <span className="text-podcast-primary font-semibold">Providence, RI</span>, 
-               Trashcan Records Podcast Studio combines authentic storytelling with professional-grade equipment for crystal-clear podcast production.
+               Located in <span className="text-podcast-primary font-semibold">Providence's Innovation District</span> within the CIC building, 
+               our creative studio provides a stylish, flexible space perfect for media productions, content creation, meetings, and intimate events.
              </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
@@ -186,7 +187,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-podcast-primary mb-6">Studio Features</h2>
-            <h3 className="text-3xl text-podcast-secondary font-medium mb-8">Everything You Need for Professional Podcasting</h3>
+            <h3 className="text-3xl text-podcast-secondary font-medium mb-8">Everything You Need for Professional Media & Events</h3>
             <div className="w-24 h-1 bg-gradient-to-r from-podcast-red to-podcast-gold mx-auto rounded-full"></div>
           </div>
           
@@ -324,7 +325,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-podcast-gold mb-6">Studio Packages</h2>
-            <h3 className="text-3xl text-podcast-accent font-medium mb-8">Choose Your Recording Experience</h3>
+            <h3 className="text-3xl text-podcast-accent font-medium mb-8">Choose Your Creative Experience</h3>
             <div className="w-24 h-1 bg-gradient-to-r from-podcast-red to-podcast-gold mx-auto rounded-full"></div>
           </div>
           
@@ -363,7 +364,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <p className="text-podcast-accent text-lg mb-4">Ready to get started?</p>
             <a 
-                             href="mailto:studio@trashcanrecords.com" 
+                             href="mailto:trashcanrecords514@gmail.com" 
               className="inline-flex items-center px-8 py-4 bg-podcast-gold text-podcast-primary font-bold rounded-full hover:bg-podcast-gold/90 hover:scale-105 transition-all duration-300"
             >
               Contact Us Today
@@ -377,7 +378,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-podcast-primary mb-6">Get In Touch</h2>
-            <h3 className="text-3xl text-podcast-secondary font-medium mb-8">Ready to Record Your Next Podcast Episode?</h3>
+            <h3 className="text-3xl text-podcast-secondary font-medium mb-8">Ready to Book Your Creative Space?</h3>
             <div className="w-24 h-1 bg-gradient-to-r from-podcast-red to-podcast-gold mx-auto rounded-full"></div>
           </div>
           
@@ -389,15 +390,15 @@ export default function Home() {
                 <div className="space-y-2 text-gray-600">
                                      <p className="flex items-center">
                      <span className="text-podcast-red mr-3">📍</span>
-                     Trashcan Records Podcast Studio, 123 Podcast Ave, Providence, RI 02903
+                     Providence Creative Studio, CIC Building, Providence Innovation District, RI
                    </p>
                    <p className="flex items-center">
                      <span className="text-podcast-red mr-3">📞</span>
-                     (401) 555-CAST
+                     (401) 217-9799
                    </p>
                    <p className="flex items-center">
                      <span className="text-podcast-red mr-3">📧</span>
-                     studio@trashcanrecords.com
+                     trashcanrecords514@gmail.com
                    </p>
                 </div>
               </div>
@@ -433,12 +434,12 @@ export default function Home() {
                 />
                 <select className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-podcast-accent">
                   <option>Select Package</option>
-                  <option>Solo Podcaster ($25/hr)</option>
-                  <option>Interview/Co-Host ($40/hr)</option>
-                  <option>Panel/Group Cast ($60/hr)</option>
+                  <option>Content Creation ($75/hr)</option>
+                  <option>Media Production ($75/hr)</option>
+                  <option>Events & Meetings ($75/hr)</option>
                 </select>
                 <textarea 
-                  placeholder="Tell us about your podcast project..." 
+                  placeholder="Tell us about your media project or event..." 
                   rows={4}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-podcast-accent"
                 ></textarea>

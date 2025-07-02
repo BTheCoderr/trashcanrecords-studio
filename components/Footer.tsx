@@ -9,10 +9,10 @@ export const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-6 h-6 bg-podcast-red rounded-full animate-pulse-slow"></div>
-              <h3 className="text-xl font-bold">Trashcan Records Podcast Studio</h3>
+              <h3 className="text-xl font-bold">Providence Creative Studio</h3>
             </div>
             <p className="text-podcast-accent mb-4">
-              Professional podcast studio where authentic voices meet crystal-clear sound.
+              Professional media & event space in Providence's Innovation District.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-podcast-accent hover:text-podcast-gold transition-colors">
@@ -48,17 +48,17 @@ export const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-2 text-podcast-accent">
-              <p>📍 Trashcan Records Podcast Studio</p>
-              <p>123 Podcast Ave</p>
-              <p>Providence, RI 02903</p>
-              <p>📧 studio@trashcanrecords.com</p>
-              <p>📞 (401) 555-CAST</p>
+              <p>📍 Providence Creative Studio</p>
+              <p>CIC Building</p>
+              <p>Providence Innovation District, RI</p>
+              <p>📧 trashcanrecords514@gmail.com</p>
+              <p>📞 (401) 217-9799</p>
             </div>
           </div>
         </div>
         
         <div className="border-t border-podcast-secondary mt-8 pt-8 text-center text-podcast-accent">
-          <p>&copy; 2024 Trashcan Records Podcast Studio. All rights reserved.</p>
+          <p>&copy; 2024 Providence Creative Studio. All rights reserved.</p>
         </div>
       </div>
     </footer>

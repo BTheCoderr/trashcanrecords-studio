@@ -8,7 +8,7 @@ export const Header = () => {
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-podcast-red rounded-full animate-pulse-slow"></div>
-              <span className="text-podcast-gold font-bold text-xl">Trashcan Records</span>
+              <span className="text-podcast-gold font-bold text-xl">Providence Creative Studio</span>
             </div>
           </div>
           
